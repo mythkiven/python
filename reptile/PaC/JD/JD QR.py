@@ -33,8 +33,43 @@ importlib.reload(sys)
 #sys.setdefaultencoding('utf-8')
 
 # get function name
-# 
+#
 
+"""
+1. 函数: Python提供许多内建函数,例如: print()
+自定义函数:
+def 函数名（参数列表）:
+    函数体
+
+2. 变量类型:
+在 python 中，类型属于对象，变量是没有类型的：
+a=[1,2,3]
+a="Runoob"
+以上代码中，[1,2,3] 是 List 类型，"Runoob" 是 String 类型，而变量 a 是没有类型.
+她仅仅是一个对象的引用（一个指针），可以是 List 类型对象，也可以指向 String 类型对象。
+3. 可变(mutable)与不可变(immutable)对象
+在 python 中，strings, tuples, 和 numbers 是不可变对象(如a = "ss" fun（a）将 a副本传到函数)，而 list,dict 等则是可以修改的对象(变量赋值 la=[1,2,3,4] fun(la),将 la对象/指针传进去)。
+4.匿名函数: lambda [arg1 [,arg2,.....argn]]:expression
+例如: sum = lambda arg1, arg2: arg1 + arg2;
+print ("相加后的值为 : ", sum( 10, 20 ))
+
+FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
+解释:
+    传入:FuncName(x),x不传,使用默认值 n=0.
+    sys._getframe().f_code.co_filename  #当前文件名，可以通过__file__获得
+    sys._getframe(0).f_code.co_name  #当前函数名
+    sys._getframe(1).f_code.co_name　#调用该函数的函数的名字，如果没有被调用，则返回<module>，貌似call stack的栈低
+    sys._getframe().f_lineno #当前行号
+
+"""
+def get_cur_info():
+    print ("1:",sys._getframe().f_code.co_filename,"哈哈")#当前文件名
+    print (sys._getframe(0).f_code.co_name)#调用该函数的函数的名字
+    print (sys._getframe(1).f_code.co_name)#该函数,没有被调用,返回 <module>
+    print (sys._getframe().f_lineno)
+
+
+# #打印函数名以及是否调用:
 FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
 
 
@@ -174,7 +209,7 @@ class JDWrapper(object):
             f.close()
 
         os.system('start ' + image_file)
-        return str(raw_input('Auth Code: '))
+        return str(input('Auth Code: '))
 
     def _login_once(self, login_data):
         # url parameter
@@ -218,7 +253,9 @@ class JDWrapper(object):
                 self.sess.cookies[cookie['name']] = str(cookie['value'])
 
             # for (k, v) in self.sess.cookies.items():
-            #	print '%s: %s' % (k, v)
+            # 	print '%s: %s' % (k, v)
+
+
 
             # response data hidden input == 9 ??. Changed
             inputs = soup.select('form#formlogin input[type=hidden]')
@@ -707,6 +744,7 @@ def main(options):
 
 
 if __name__ == '__main__':
+
     # help message
     parser = argparse.ArgumentParser(description='Simulate to login Jing Dong, and buy sepecified good')
     # parser.add_argument('-u', '--username',
@@ -733,6 +771,7 @@ if __name__ == '__main__':
     hw_watch = '2567304'
     iphone_7 = '3133851'
 
+    get_cur_info()
     options = parser.parse_args()
     print (options)
 
@@ -745,4 +784,5 @@ if __name__ == '__main__':
         print u'请输入用户名密码'
         exit(1)
     '''
+
     main(options)
