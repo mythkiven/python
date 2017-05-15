@@ -1,0 +1,1166 @@
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2826.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2826&posColumn=2826.1">Cocos2d-x 引擎源码中的纹理优化
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2826.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2826&posColumn=2826.1">Cocos2d-x 引擎源码中的纹理优化</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将讲解Cocos2d-x的纹理优化，包括压缩纹理的原理和使用，纹理缓存机制，以及其他的一些纹理相关的优化方式，让你详细了解 Cocos2d-x 引擎是如何对纹理进行优化的。
+		
+classtime:3课时
+							86分钟
+classlevel:高级
+learnnum:2339人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2825.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2825&posColumn=2825.2">苹果 WWDC 2016 解读
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2825.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2825&posColumn=2825.2">苹果 WWDC 2016 解读</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程从技术学习的角度解构与剖析 2016 苹果全球开发者大会，内容包括  WatchOS、TvOS、macOS 和 iOS 四大平台升级、三大应用开放和两处人工智能登场，以及程序员最关注的 Siri 的 API 开放。
+		
+classtime:1课时
+							14分钟
+classlevel:初级
+learnnum:3488人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2821.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2821&posColumn=2821.3">Gulp + Sass + Bootstrap 网页开发实战
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2821.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2821&posColumn=2821.3">Gulp + Sass + Bootstrap 网页开发实战</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将介绍如何使用 yo 快速开发一个基于 Gulp + Sass + Bootstrap 的网站，着重讲解 Gulp 这一自动化构建工具，并通过实例教学，帮助学员学习如何去快速搭建一个漂亮、功能完备的网站。
+		
+classtime:4课时
+							35分钟
+classlevel:中级
+learnnum:3259人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2815.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2815&posColumn=2815.4">Android 快速开发框架之 xUtils3
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2815.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2815&posColumn=2815.4">Android 快速开发框架之 xUtils3</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将详细讲解 xUtils3 的配置，并深入讲解注解模块、网络模块、图片模块、数据库模块四大模块在实际开发中的使用。
+		
+classtime:6课时
+							95分钟
+classlevel:初级
+learnnum:5138人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2792.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2792&posColumn=2792.5">Microsoft SQL Server 数据库的查询优化器的运行方式
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2792.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2792&posColumn=2792.5">Microsoft SQL Server 数据库的查询优化器的运行方式</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要详细讲解 SQL Server 底层组件查询优化器的运行机制，了解合理的参数配置项，通过本课程的学习，理解 SQL Server 数据库底层查询优化器的运行方式，掌握我们所写的 T-SQL 语句的优化步骤，了解 SQL Server 底层原理进而掌握调优技巧。
+		
+classtime:3课时
+							58分钟
+classlevel:中级
+learnnum:2807人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2791.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2791&posColumn=2791.6">树莓派项目实践（一）——可用 web 控制的人体感应小夜灯
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2791.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2791&posColumn=2791.6">树莓派项目实践（一）——可用 web 控制的人体感应小夜灯</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍了一个完整的树莓派项目的开发过程——可用 web 控制的人体感应小夜灯。
+这个小夜灯算是一个功能很基础的「智能硬件」，但在现实生活中非常实用。
+大概说来，它具有以下功能特点：
+（1）可以在 web 页面上控制灯的开、关、以及自动模式，在自动模式下，当检测到人体接近的时候灯会自动点亮；
+（2）可在 web 页面上设置自动模式下的人体感应时间段，只有在指定的时间段内，灯才会感应人体接近状态。在其他时间段内，灯不会点亮。
+		
+classtime:4课时
+							67分钟
+classlevel:中级
+learnnum:3987人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2790.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2790&posColumn=2790.7">Docker 安装
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2790.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2790&posColumn=2790.7">Docker 安装</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲述如何在用户的私有主机、公有主机上安装 Docker，同时介绍如何使用国内的镜像仓库。
+		
+classtime:3课时
+							21分钟
+classlevel:中级
+learnnum:3688人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2782.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2782&posColumn=2782.8">Cocos2d-x 引擎源码中的纹理
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2782.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2782&posColumn=2782.8">Cocos2d-x 引擎源码中的纹理</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将讲解Cocos2d-x的纹理，包括生成纹理之前，将信息从客户端保存的原始图片中解包出来，然后将信息传给GPU生成纹理，设置纹理属性，最后通过纹理单元将纹理传递给Shader，把纹理映射到图片上，让你详细了解 Cocos2d-x 引擎是如何进行使用纹理的。
+		
+classtime:3课时
+							105分钟
+classlevel:高级
+learnnum:2474人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2781.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2781&posColumn=2781.9">Dubbo 使用入门（下）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2781.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2781&posColumn=2781.9">Dubbo 使用入门（下）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课使用 Dubbo 配置与 Web 工程交互，以及使用 Dubbo 配置多协议交互。
+		
+classtime:3课时
+							53分钟
+classlevel:中级
+learnnum:3165人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2780.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2780&posColumn=2780.10">JavaScript 异步编程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2780.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2780&posColumn=2780.10">JavaScript 异步编程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍异步编程和同步编程的区别，分析异步编程的优势。并且通过异步编程的实例，来引导学员学习异步编程思想，提高开发效率和改善编码风格。
+		
+classtime:4课时
+							29分钟
+classlevel:中级
+learnnum:5460人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2779.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2779&posColumn=2779.11">Google  I/O 2016 技术揭秘与前瞻
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2779.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2779&posColumn=2779.11">Google  I/O 2016 技术揭秘与前瞻</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要针对2016 Google I/O大会Keynote发布的内容进行剖析。讲解Google目前发展的技术趋势及主打方向。并针对开发者在大会中所需要了解的知识方向进行分析。让开发者们了解接下去需要学习哪些技能来应对新发布的产品及技术。以及如何进行学习。
+		
+classtime:4课时
+							52分钟
+classlevel:初级
+learnnum:8452人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2743.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2743&posColumn=2743.12">Docker 基础知识
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2743.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2743&posColumn=2743.12">Docker 基础知识</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程首先运行并解析第一个容器，然后介绍虚拟化和 Docker 的历史及云计算的基础知识。
+		
+classtime:3课时
+							20分钟
+classlevel:中级
+learnnum:4090人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2741.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2741&posColumn=2741.13">OSG人机交互
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2741.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2741&posColumn=2741.13">OSG人机交互</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解 OSG 中的人机交互，课程从 OpenGL 成像流程入手，循循渐进的方式对每一步的转换做深入的解释说明，然后在引入 OSG 中具体的实现。知道了整个的流程，再学习场景漫游交互和对象拾取更容易理解了。
+		
+classtime:3课时
+							36分钟
+classlevel:初级
+learnnum:2621人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2730.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2730&posColumn=2730.14">Arduino 模拟鼠标键盘（二）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2730.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2730&posColumn=2730.14">Arduino 模拟鼠标键盘（二）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程首先讲解利用 Arduino 来模拟鼠标键盘基本原理，然后通过对三个具体实例的讲解帮助学员掌握如何利用 Arduino 来模拟鼠标键盘操作。
+		
+classtime:3课时
+							51分钟
+classlevel:中级
+learnnum:2616人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2723.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2723&posColumn=2723.15">Flume 基础架构
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2723.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2723&posColumn=2723.15">Flume 基础架构</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Flume 的基础架构，然后会对 Flume 的三大组件（Source组件、Channel组件、Sink组件）以及 Flume 过滤器 ( Interceptors )、Flume Channel 选择器 ( Selectors )、Flume 序列化器 ( Serializers ) 进行详细的讲解。最后会讲解 Flume Sink 容错和负责均衡。
+		
+classtime:4课时
+							45分钟
+classlevel:初级
+learnnum:2841人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2722.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2722&posColumn=2722.16">一元线性回归
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2722.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2722&posColumn=2722.16">一元线性回归</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解一元线性回归的思想和原理，内容包括一元线性回归的术语和原理，以及对回归结果的检验，并通过实例演示一元线性回归的做法。
+		
+classtime:3课时
+							50分钟
+classlevel:初级
+learnnum:2525人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2721.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2721&posColumn=2721.17">Cocos2d-x 引擎源码中的 OpenGL ES知识（下）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2721.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2721&posColumn=2721.17">Cocos2d-x 引擎源码中的 OpenGL ES知识（下）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程为OpenGL ES课程的下半部分，将把 OpenGL ES 和 EGL 以及 GLSL 串起来讲解，并按照 OpenGL ES 的流程，详细介绍OpenGL ES中的主要API，绑定 Shader，传入绘制信息，并执行绘制命令。
+		
+classtime:3课时
+							116分钟
+classlevel:高级
+learnnum:2387人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2720.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2720&posColumn=2720.18">编程之美“凌云之智“线上分享之 Azure 线上培训及工程师答疑
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2720.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2720&posColumn=2720.18">编程之美“凌云之智“线上分享之 Azure 线上培训及工程师答疑</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			2016编程之美挑战赛已进入复赛阶段，为了帮助大家更好的使用 Azure，我们将在5月4日晚上推出2016编程之美挑战赛“凌云之智”系列分享之 Azure 课程。
+		
+classtime:1课时
+							21分钟
+classlevel:初级
+learnnum:3337人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2719.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2719&posColumn=2719.19">Launcher3－文件夹自动整理
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2719.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2719&posColumn=2719.19">Launcher3－文件夹自动整理</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲文件夹自动整理。将手机上除了第一屏之外的应用自动整理到文件夹，并能指定位置、固定位置。和上一节课的适配所有机型的桌面布局类似，方法可以借鉴。
+		
+classtime:4课时
+							42分钟
+classlevel:初级
+learnnum:3210人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2718.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2718&posColumn=2718.20">iOS 封装第三方支付 SDK
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2718.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2718&posColumn=2718.20">iOS 封装第三方支付 SDK</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要介绍 iOS 如何创建静态库、如何创建 Framework 类库，以及如何提供 SDK 供其他人员调用。同时对第三方支付进行进一步的封装，以一个 SDK 的方式对外提供。
+		
+classtime:4课时
+							29分钟
+classlevel:初级
+learnnum:3076人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2716.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2716&posColumn=2716.21">物联网技术导论（十一）物联网中的信息安全与隐私保护
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2716.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2716&posColumn=2716.21">物联网技术导论（十一）物联网中的信息安全与隐私保护</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			物联网信息安全比互联网中的信息安全更具挑战性。本课程重点介绍物联网中 RFID 安全和位置隐私两大安全隐患以及典型的安全机制。
+		
+classtime:3课时
+							46分钟
+classlevel:初级
+learnnum:2508人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2715.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2715&posColumn=2715.22">C 语言编程实战：学生信息管理系统（下）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2715.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2715&posColumn=2715.22">C 语言编程实战：学生信息管理系统（下）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍学生信息管理系统中的保存学生信息模块、加载学生信息模块、显示学生信息模块、查找学生信息模块以及删除学生信息模块。在理解系统功能的基础上，编写各个模块的代码，并对代码的关键部分进行讲解。
+
+		
+classtime:5课时
+							39分钟
+classlevel:中级
+learnnum:4435人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2714.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2714&posColumn=2714.23">名企数据结构面试题之 DFS（上）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2714.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2714&posColumn=2714.23">名企数据结构面试题之 DFS（上）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程学习二叉树的 DFS，讲解节点所在层数、最大深度等面试题，并总结解题规律，让大家初步掌握 DFS 相关面试题的常用解法。
+		
+classtime:4课时
+							33分钟
+classlevel:中级
+learnnum:2457人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2713.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2713&posColumn=2713.24">Tornado 开发--TCP 编程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2713.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2713&posColumn=2713.24">Tornado 开发--TCP 编程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解通过使用 tornado 中 ioloop，iostream 等相关 API 进行TCP编程。简单介绍了rpc相关知识，并且与同类框架 twisted 进行比较。
+		
+classtime:5课时
+							46分钟
+classlevel:高级
+learnnum:2599人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2712.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2712&posColumn=2712.1">编程之美“凌云之智“线上分享之复赛题目提点
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2712.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2712&posColumn=2712.1">编程之美“凌云之智“线上分享之复赛题目提点</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			2016编程之美挑战赛已进入复赛阶段，本次分享中，学术搜索首席研发总监 Albert 及产品经理Summert 将提点今年复赛题目，并对微软学术搜索引擎原理、数据库结构、API 进行介绍。
+微软学术搜索是“微软学术”服务推出的免费学术搜索引擎，可以帮助用户全面、准确地查找学术论文、国际会议、权威期刊、研究专家及领域等专业学术资源。而为了方便用户使用，微软学术搜索已嵌入必应搜索引擎，在必应搜索首页就能找到。
+		
+classtime:1课时
+							0分钟
+classlevel:初级
+learnnum:2910人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2711.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2711&posColumn=2711.2">马上着手 Swift 开发 - 踏上 Swift 征程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2711.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2711&posColumn=2711.2">马上着手 Swift 开发 - 踏上 Swift 征程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍 Xcode 和 Playground 并在 Playground 快速演示 Swift，同时为有 Objective-C 基础的学员讲解 OC 和 Swift 两门语言的一些区别。
+		
+classtime:3课时
+							53分钟
+classlevel:初级
+learnnum:2479人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2710.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2710&posColumn=2710.3">Hadoop MapReduce 进阶
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2710.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2710&posColumn=2710.3">Hadoop MapReduce 进阶</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Hadoop 序列化机制，自定义序列化完成 MapReduce 任务，并通过 ToolRunner 运行标准任务，演示 Hadoop 中的  RPC 通信，着重对 MapReduce On YARN 的源码进行分析。
+		
+classtime:5课时
+							63分钟
+classlevel:高级
+learnnum:2606人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2707.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2707&posColumn=2707.4">整站项目开发实战之网站首页布局搭建
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2707.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2707&posColumn=2707.4">整站项目开发实战之网站首页布局搭建</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			设计本课程的目的是让 Web 前端工程师，可以轻松将设计师提供的 PSD 效果图，切分成 HTML 网页文件，学完本课程可以掌握 PS 软件的切图技巧和 HTML 布局技巧。
+		
+classtime:5课时
+							85分钟
+classlevel:中级
+learnnum:12310人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2706.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2706&posColumn=2706.5">Android Studio 全方位指南之进阶使用技巧
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2706.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2706&posColumn=2706.5">Android Studio 全方位指南之进阶使用技巧</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要介绍在使用 Android Studio 进行开发时会使用到的一些高级技巧，Gradle 的高级配置方案，多渠道打包，以及一些插件利器的安装使用。
+		
+classtime:4课时
+							53分钟
+classlevel:初级
+learnnum:7562人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2705.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2705&posColumn=2705.6">iOS 界面动画教程之 Layer 动画进阶
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2705.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2705&posColumn=2705.6">iOS 界面动画教程之 Layer 动画进阶</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程继续讲解 Layer 层面的动画实现，并完成形状遮罩、挤压动画、路径动画和复制动画的效果。
+		
+classtime:4课时
+							71分钟
+classlevel:中级
+learnnum:2926人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2704.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2704&posColumn=2704.7">微网站制作速成法
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2704.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2704&posColumn=2704.7">微网站制作速成法</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍微网站产生的背景，主要用途与制作实例，重点讲解在没有美工的情况下，微网站该如何制作。学完本课程，你将可以独自完成一个微网站的项目。
+		
+classtime:3课时
+							58分钟
+classlevel:中级
+learnnum:7687人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2703.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2703&posColumn=2703.8">编程之美优秀选手唐飞虎经验分享
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2703.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2703&posColumn=2703.8">编程之美优秀选手唐飞虎经验分享</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			他是14年编程之美挑战赛的全国总冠军孙祥彦的高中室友，从小学开始一路保送到大学，是哈尔滨工业大学的叱咤风云的“传说中的学长”，是腼腆羞涩却心怀青春热血的创业达人，是特立独行执行力超强的编程高手，是近乎偏执沉迷于编程世界的疯狂极客，他也是15年编程之美挑战赛的全国总冠军。在本期分享中，唐飞虎将于你分享他的个人创业经历，决赛项目经验，赛后生活，职业规划及求职技巧。
+		
+classtime:1课时
+							34分钟
+classlevel:初级
+learnnum:3235人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2702.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2702&posColumn=2702.9">Revel 开发高级阶段之数据存储
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2702.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2702&posColumn=2702.9">Revel 开发高级阶段之数据存储</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程在前面课程的基础上，将对常见关系型数据库的 Mysql 以及非关系型数据库 MongoDB 作简要的介绍；同时也将详细讲解在 Revel 框架中如何设置 Mysql 和 Mongodb的ORM，以及如何借助于 ORM 对数据库进行简单的 CRUD 操作。
+		
+classtime:3课时
+							88分钟
+classlevel:初级
+learnnum:2287人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2701.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2701&posColumn=2701.10">物联网技术导论（十）物联网中的智能决策
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2701.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2701&posColumn=2701.10">物联网技术导论（十）物联网中的智能决策</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍数据挖掘的基本流程（预处理，数据挖掘，知识评估与表示），重点介绍几种典型的数据挖掘算法，最后讨论物联网中智能决策的新特点。
+		
+classtime:3课时
+							36分钟
+classlevel:初级
+learnnum:2420人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2700.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2700&posColumn=2700.11">开发远程控制程序高级功能
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2700.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2700&posColumn=2700.11">开发远程控制程序高级功能</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解在图形化远程控制程序的基础上，实现读写剪贴板，查看远程受控电脑的屏幕和上传文件等高级功能。
+		
+classtime:5课时
+							48分钟
+classlevel:中级
+learnnum:2564人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2699.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2699&posColumn=2699.12">Android 应用结构与实例
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2699.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2699&posColumn=2699.12">Android 应用结构与实例</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主讲 Android 手机应用的结构，状态栏、应用栏、菜单、工具栏、侧边导航；通过布局实例深入讲解应用结构的设计标准。
+		
+classtime:3课时
+							40分钟
+classlevel:初级
+learnnum:2708人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2698.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2698&posColumn=2698.13">如何提升 APP 防御能力
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2698.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2698&posColumn=2698.13">如何提升 APP 防御能力</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			2015年安卓应用盗版情况不断恶化，平均1款正版 APP 背后藏着92个盗版，比2014年增长了3.5倍。面对如此猖獗的盗版现象，本课程将向开发者讲解提升 APP 安全的常见手段，APP 加固后文件发生的变化以及如何使用360加固助手。
+		
+classtime:4课时
+							44分钟
+classlevel:中级
+learnnum:3228人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2697.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2697&posColumn=2697.14">Laravel 入门之路由
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2697.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2697&posColumn=2697.14">Laravel 入门之路由</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Laravel 中的路由，结合一些简单的小例子，让学习者对 Laravel 中的路由有更深刻的了解。
+		
+classtime:4课时
+							51分钟
+classlevel:初级
+learnnum:2899人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2688.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2688&posColumn=2688.15">Python 类深入
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2688.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2688&posColumn=2688.15">Python 类深入</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程在已经掌握的有关类的知识基础上，对类和实例的某些特殊方法、属性进行深入探究，并梳理对类的认识，用特殊方法定制简单的类，还要了解迭代器和生成器的特点及应用。
+		
+classtime:3课时
+							39分钟
+classlevel:初级
+learnnum:2868人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2689.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2689&posColumn=2689.16">Android 基准网格、边距与布局标准
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2689.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2689&posColumn=2689.16">Android 基准网格、边距与布局标准</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程引入 Android 布局实例，主讲 Android 的基准网格原则、元素对齐、边距以及尺寸原则；解析比例布局原理与技巧。
+		
+classtime:4课时
+							34分钟
+classlevel:初级
+learnnum:3048人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2687.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2687&posColumn=2687.17">Phaser.js 中的物理引擎
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2687.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2687&posColumn=2687.17">Phaser.js 中的物理引擎</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要介绍 Phaser.js 中的几种物理引擎，以及其中最基础的 Arcade 物理引擎的使用方法。
+		
+classtime:3课时
+							38分钟
+classlevel:初级
+learnnum:2418人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2686.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2686&posColumn=2686.18">Hadoop MapReduce 入门
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2686.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2686&posColumn=2686.18">Hadoop MapReduce 入门</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Hadoop 核心之一的 MapReduce 相关概念，并在 Windows 中演示安装 Eclipse 运行 MapReduce 的插件，编写运行词频统计测试。
+		
+classtime:3课时
+							56分钟
+classlevel:高级
+learnnum:3157人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2685.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2685&posColumn=2685.19">BitmapDrawable、NinePatchDrawable 和 PictureDrawable 类型精讲
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2685.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2685&posColumn=2685.19">BitmapDrawable、NinePatchDrawable 和 PictureDrawable 类型精讲</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程先讲述 BitmapDrawable 原理和使用，然后讲述 NinePatchDrawable 和 PictureDrawable的原理和使用，最后做课程总结。
+		
+classtime:3课时
+							27分钟
+classlevel:初级
+learnnum:2739人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2684.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2684&posColumn=2684.20">WebService 概述
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2684.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2684&posColumn=2684.20">WebService 概述</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程通过 WebService 的学习，学会什么是 WebService、WebService 的工作原理、SOAP 结构分析、WSDL 结构分析、WebService 注解以及 WebService 的优缺点。
+		
+classtime:5课时
+							61分钟
+classlevel:初级
+learnnum:6037人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2681.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2681&posColumn=2681.21">wxPython 环境搭建及可视化编程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2681.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2681&posColumn=2681.21">wxPython 环境搭建及可视化编程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程会讲解 wxPython 环境搭建及可视化编程，包括 Windows 下搭建wxPython环境、MAC下搭建 wxPython 环境、可视化编程实现等知识，并结合实际案例进行讲解 wxPython 环境搭建及可视化编程，加深大家的理解。
+		
+classtime:3课时
+							106分钟
+classlevel:中级
+learnnum:2704人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2680.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2680&posColumn=2680.22">使用 Alamofire 请求网络
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2680.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2680&posColumn=2680.22">使用 Alamofire 请求网络</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			学完本课程后能够熟悉 Alamofire 的基本操作和 HTTP 的一些知识。
+
+		
+classtime:3课时
+							49分钟
+classlevel:高级
+learnnum:2712人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2679.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2679&posColumn=2679.23">Android logcat 命令使用
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2679.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2679&posColumn=2679.23">Android logcat 命令使用</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程详细介绍 logcat 工具，什么是 logcat 命令和 logcat命令的子命令与参数的详解。在本课程中可以学习到 logcat 的格式化输出，获取不同缓冲区的 log ，分级过滤，TAG 过滤等重要功能的使用。
+		
+classtime:5课时
+							49分钟
+classlevel:初级
+learnnum:2526人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2677.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2677&posColumn=2677.24">数据结构与算法之位运算
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2677.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2677&posColumn=2677.24">数据结构与算法之位运算</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍位运算的相关知识。位运算相关的算法是面试中的高频题，我们会从基础开始详细介绍位运算的各方面知识，并对经典算法进行深入剖析，给出不同的解决方案。
+		
+classtime:3课时
+							54分钟
+classlevel:中级
+learnnum:3008人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2826.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2826&posColumn=2826.1">Cocos2d-x 引擎源码中的纹理优化
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2826.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2826&posColumn=2826.1">Cocos2d-x 引擎源码中的纹理优化</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将讲解Cocos2d-x的纹理优化，包括压缩纹理的原理和使用，纹理缓存机制，以及其他的一些纹理相关的优化方式，让你详细了解 Cocos2d-x 引擎是如何对纹理进行优化的。
+		
+classtime:3课时
+							86分钟
+classlevel:高级
+learnnum:2339人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2825.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2825&posColumn=2825.2">苹果 WWDC 2016 解读
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2825.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2825&posColumn=2825.2">苹果 WWDC 2016 解读</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程从技术学习的角度解构与剖析 2016 苹果全球开发者大会，内容包括  WatchOS、TvOS、macOS 和 iOS 四大平台升级、三大应用开放和两处人工智能登场，以及程序员最关注的 Siri 的 API 开放。
+		
+classtime:1课时
+							14分钟
+classlevel:初级
+learnnum:3488人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2821.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2821&posColumn=2821.3">Gulp + Sass + Bootstrap 网页开发实战
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2821.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2821&posColumn=2821.3">Gulp + Sass + Bootstrap 网页开发实战</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将介绍如何使用 yo 快速开发一个基于 Gulp + Sass + Bootstrap 的网站，着重讲解 Gulp 这一自动化构建工具，并通过实例教学，帮助学员学习如何去快速搭建一个漂亮、功能完备的网站。
+		
+classtime:4课时
+							35分钟
+classlevel:中级
+learnnum:3259人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2815.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2815&posColumn=2815.4">Android 快速开发框架之 xUtils3
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2815.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2815&posColumn=2815.4">Android 快速开发框架之 xUtils3</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将详细讲解 xUtils3 的配置，并深入讲解注解模块、网络模块、图片模块、数据库模块四大模块在实际开发中的使用。
+		
+classtime:6课时
+							95分钟
+classlevel:初级
+learnnum:5138人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2792.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2792&posColumn=2792.5">Microsoft SQL Server 数据库的查询优化器的运行方式
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2792.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2792&posColumn=2792.5">Microsoft SQL Server 数据库的查询优化器的运行方式</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要详细讲解 SQL Server 底层组件查询优化器的运行机制，了解合理的参数配置项，通过本课程的学习，理解 SQL Server 数据库底层查询优化器的运行方式，掌握我们所写的 T-SQL 语句的优化步骤，了解 SQL Server 底层原理进而掌握调优技巧。
+		
+classtime:3课时
+							58分钟
+classlevel:中级
+learnnum:2807人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2791.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2791&posColumn=2791.6">树莓派项目实践（一）——可用 web 控制的人体感应小夜灯
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2791.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2791&posColumn=2791.6">树莓派项目实践（一）——可用 web 控制的人体感应小夜灯</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍了一个完整的树莓派项目的开发过程——可用 web 控制的人体感应小夜灯。
+这个小夜灯算是一个功能很基础的「智能硬件」，但在现实生活中非常实用。
+大概说来，它具有以下功能特点：
+（1）可以在 web 页面上控制灯的开、关、以及自动模式，在自动模式下，当检测到人体接近的时候灯会自动点亮；
+（2）可在 web 页面上设置自动模式下的人体感应时间段，只有在指定的时间段内，灯才会感应人体接近状态。在其他时间段内，灯不会点亮。
+		
+classtime:4课时
+							67分钟
+classlevel:中级
+learnnum:3987人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2790.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2790&posColumn=2790.7">Docker 安装
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2790.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2790&posColumn=2790.7">Docker 安装</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲述如何在用户的私有主机、公有主机上安装 Docker，同时介绍如何使用国内的镜像仓库。
+		
+classtime:3课时
+							21分钟
+classlevel:中级
+learnnum:3688人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2782.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2782&posColumn=2782.8">Cocos2d-x 引擎源码中的纹理
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2782.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2782&posColumn=2782.8">Cocos2d-x 引擎源码中的纹理</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程将讲解Cocos2d-x的纹理，包括生成纹理之前，将信息从客户端保存的原始图片中解包出来，然后将信息传给GPU生成纹理，设置纹理属性，最后通过纹理单元将纹理传递给Shader，把纹理映射到图片上，让你详细了解 Cocos2d-x 引擎是如何进行使用纹理的。
+		
+classtime:3课时
+							105分钟
+classlevel:高级
+learnnum:2474人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2781.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2781&posColumn=2781.9">Dubbo 使用入门（下）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2781.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2781&posColumn=2781.9">Dubbo 使用入门（下）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课使用 Dubbo 配置与 Web 工程交互，以及使用 Dubbo 配置多协议交互。
+		
+classtime:3课时
+							53分钟
+classlevel:中级
+learnnum:3165人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2780.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2780&posColumn=2780.10">JavaScript 异步编程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2780.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2780&posColumn=2780.10">JavaScript 异步编程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍异步编程和同步编程的区别，分析异步编程的优势。并且通过异步编程的实例，来引导学员学习异步编程思想，提高开发效率和改善编码风格。
+		
+classtime:4课时
+							29分钟
+classlevel:中级
+learnnum:5460人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2779.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2779&posColumn=2779.11">Google  I/O 2016 技术揭秘与前瞻
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2779.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2779&posColumn=2779.11">Google  I/O 2016 技术揭秘与前瞻</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要针对2016 Google I/O大会Keynote发布的内容进行剖析。讲解Google目前发展的技术趋势及主打方向。并针对开发者在大会中所需要了解的知识方向进行分析。让开发者们了解接下去需要学习哪些技能来应对新发布的产品及技术。以及如何进行学习。
+		
+classtime:4课时
+							52分钟
+classlevel:初级
+learnnum:8452人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2743.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2743&posColumn=2743.12">Docker 基础知识
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2743.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2743&posColumn=2743.12">Docker 基础知识</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程首先运行并解析第一个容器，然后介绍虚拟化和 Docker 的历史及云计算的基础知识。
+		
+classtime:3课时
+							20分钟
+classlevel:中级
+learnnum:4090人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2741.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2741&posColumn=2741.13">OSG人机交互
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2741.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2741&posColumn=2741.13">OSG人机交互</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解 OSG 中的人机交互，课程从 OpenGL 成像流程入手，循循渐进的方式对每一步的转换做深入的解释说明，然后在引入 OSG 中具体的实现。知道了整个的流程，再学习场景漫游交互和对象拾取更容易理解了。
+		
+classtime:3课时
+							36分钟
+classlevel:初级
+learnnum:2621人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2730.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2730&posColumn=2730.14">Arduino 模拟鼠标键盘（二）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2730.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2730&posColumn=2730.14">Arduino 模拟鼠标键盘（二）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程首先讲解利用 Arduino 来模拟鼠标键盘基本原理，然后通过对三个具体实例的讲解帮助学员掌握如何利用 Arduino 来模拟鼠标键盘操作。
+		
+classtime:3课时
+							51分钟
+classlevel:中级
+learnnum:2616人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2723.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2723&posColumn=2723.15">Flume 基础架构
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2723.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2723&posColumn=2723.15">Flume 基础架构</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Flume 的基础架构，然后会对 Flume 的三大组件（Source组件、Channel组件、Sink组件）以及 Flume 过滤器 ( Interceptors )、Flume Channel 选择器 ( Selectors )、Flume 序列化器 ( Serializers ) 进行详细的讲解。最后会讲解 Flume Sink 容错和负责均衡。
+		
+classtime:4课时
+							45分钟
+classlevel:初级
+learnnum:2841人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2722.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2722&posColumn=2722.16">一元线性回归
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2722.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2722&posColumn=2722.16">一元线性回归</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解一元线性回归的思想和原理，内容包括一元线性回归的术语和原理，以及对回归结果的检验，并通过实例演示一元线性回归的做法。
+		
+classtime:3课时
+							50分钟
+classlevel:初级
+learnnum:2525人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2721.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2721&posColumn=2721.17">Cocos2d-x 引擎源码中的 OpenGL ES知识（下）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2721.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2721&posColumn=2721.17">Cocos2d-x 引擎源码中的 OpenGL ES知识（下）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程为OpenGL ES课程的下半部分，将把 OpenGL ES 和 EGL 以及 GLSL 串起来讲解，并按照 OpenGL ES 的流程，详细介绍OpenGL ES中的主要API，绑定 Shader，传入绘制信息，并执行绘制命令。
+		
+classtime:3课时
+							116分钟
+classlevel:高级
+learnnum:2387人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2720.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2720&posColumn=2720.18">编程之美“凌云之智“线上分享之 Azure 线上培训及工程师答疑
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2720.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2720&posColumn=2720.18">编程之美“凌云之智“线上分享之 Azure 线上培训及工程师答疑</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			2016编程之美挑战赛已进入复赛阶段，为了帮助大家更好的使用 Azure，我们将在5月4日晚上推出2016编程之美挑战赛“凌云之智”系列分享之 Azure 课程。
+		
+classtime:1课时
+							21分钟
+classlevel:初级
+learnnum:3337人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2719.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2719&posColumn=2719.19">Launcher3－文件夹自动整理
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2719.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2719&posColumn=2719.19">Launcher3－文件夹自动整理</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲文件夹自动整理。将手机上除了第一屏之外的应用自动整理到文件夹，并能指定位置、固定位置。和上一节课的适配所有机型的桌面布局类似，方法可以借鉴。
+		
+classtime:4课时
+							42分钟
+classlevel:初级
+learnnum:3210人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2718.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2718&posColumn=2718.20">iOS 封装第三方支付 SDK
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2718.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2718&posColumn=2718.20">iOS 封装第三方支付 SDK</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要介绍 iOS 如何创建静态库、如何创建 Framework 类库，以及如何提供 SDK 供其他人员调用。同时对第三方支付进行进一步的封装，以一个 SDK 的方式对外提供。
+		
+classtime:4课时
+							29分钟
+classlevel:初级
+learnnum:3076人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2716.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2716&posColumn=2716.21">物联网技术导论（十一）物联网中的信息安全与隐私保护
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2716.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2716&posColumn=2716.21">物联网技术导论（十一）物联网中的信息安全与隐私保护</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			物联网信息安全比互联网中的信息安全更具挑战性。本课程重点介绍物联网中 RFID 安全和位置隐私两大安全隐患以及典型的安全机制。
+		
+classtime:3课时
+							46分钟
+classlevel:初级
+learnnum:2508人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2715.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2715&posColumn=2715.22">C 语言编程实战：学生信息管理系统（下）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2715.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2715&posColumn=2715.22">C 语言编程实战：学生信息管理系统（下）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍学生信息管理系统中的保存学生信息模块、加载学生信息模块、显示学生信息模块、查找学生信息模块以及删除学生信息模块。在理解系统功能的基础上，编写各个模块的代码，并对代码的关键部分进行讲解。
+
+		
+classtime:5课时
+							39分钟
+classlevel:中级
+learnnum:4435人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2714.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2714&posColumn=2714.23">名企数据结构面试题之 DFS（上）
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2714.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2714&posColumn=2714.23">名企数据结构面试题之 DFS（上）</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程学习二叉树的 DFS，讲解节点所在层数、最大深度等面试题，并总结解题规律，让大家初步掌握 DFS 相关面试题的常用解法。
+		
+classtime:4课时
+							33分钟
+classlevel:中级
+learnnum:2457人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2713.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2713&posColumn=2713.24">Tornado 开发--TCP 编程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2713.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2713&posColumn=2713.24">Tornado 开发--TCP 编程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解通过使用 tornado 中 ioloop，iostream 等相关 API 进行TCP编程。简单介绍了rpc相关知识，并且与同类框架 twisted 进行比较。
+		
+classtime:5课时
+							46分钟
+classlevel:高级
+learnnum:2599人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2712.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2712&posColumn=2712.1">编程之美“凌云之智“线上分享之复赛题目提点
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2712.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2712&posColumn=2712.1">编程之美“凌云之智“线上分享之复赛题目提点</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			2016编程之美挑战赛已进入复赛阶段，本次分享中，学术搜索首席研发总监 Albert 及产品经理Summert 将提点今年复赛题目，并对微软学术搜索引擎原理、数据库结构、API 进行介绍。
+微软学术搜索是“微软学术”服务推出的免费学术搜索引擎，可以帮助用户全面、准确地查找学术论文、国际会议、权威期刊、研究专家及领域等专业学术资源。而为了方便用户使用，微软学术搜索已嵌入必应搜索引擎，在必应搜索首页就能找到。
+		
+classtime:1课时
+							0分钟
+classlevel:初级
+learnnum:2910人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2711.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2711&posColumn=2711.2">马上着手 Swift 开发 - 踏上 Swift 征程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2711.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2711&posColumn=2711.2">马上着手 Swift 开发 - 踏上 Swift 征程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍 Xcode 和 Playground 并在 Playground 快速演示 Swift，同时为有 Objective-C 基础的学员讲解 OC 和 Swift 两门语言的一些区别。
+		
+classtime:3课时
+							53分钟
+classlevel:初级
+learnnum:2479人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2710.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2710&posColumn=2710.3">Hadoop MapReduce 进阶
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2710.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2710&posColumn=2710.3">Hadoop MapReduce 进阶</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Hadoop 序列化机制，自定义序列化完成 MapReduce 任务，并通过 ToolRunner 运行标准任务，演示 Hadoop 中的  RPC 通信，着重对 MapReduce On YARN 的源码进行分析。
+		
+classtime:5课时
+							63分钟
+classlevel:高级
+learnnum:2606人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2707.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2707&posColumn=2707.4">整站项目开发实战之网站首页布局搭建
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2707.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2707&posColumn=2707.4">整站项目开发实战之网站首页布局搭建</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			设计本课程的目的是让 Web 前端工程师，可以轻松将设计师提供的 PSD 效果图，切分成 HTML 网页文件，学完本课程可以掌握 PS 软件的切图技巧和 HTML 布局技巧。
+		
+classtime:5课时
+							85分钟
+classlevel:中级
+learnnum:12310人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2706.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2706&posColumn=2706.5">Android Studio 全方位指南之进阶使用技巧
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2706.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2706&posColumn=2706.5">Android Studio 全方位指南之进阶使用技巧</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要介绍在使用 Android Studio 进行开发时会使用到的一些高级技巧，Gradle 的高级配置方案，多渠道打包，以及一些插件利器的安装使用。
+		
+classtime:4课时
+							53分钟
+classlevel:初级
+learnnum:7562人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2705.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2705&posColumn=2705.6">iOS 界面动画教程之 Layer 动画进阶
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2705.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2705&posColumn=2705.6">iOS 界面动画教程之 Layer 动画进阶</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程继续讲解 Layer 层面的动画实现，并完成形状遮罩、挤压动画、路径动画和复制动画的效果。
+		
+classtime:4课时
+							71分钟
+classlevel:中级
+learnnum:2926人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2704.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2704&posColumn=2704.7">微网站制作速成法
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2704.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2704&posColumn=2704.7">微网站制作速成法</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍微网站产生的背景，主要用途与制作实例，重点讲解在没有美工的情况下，微网站该如何制作。学完本课程，你将可以独自完成一个微网站的项目。
+		
+classtime:3课时
+							58分钟
+classlevel:中级
+learnnum:7687人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2703.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2703&posColumn=2703.8">编程之美优秀选手唐飞虎经验分享
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2703.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2703&posColumn=2703.8">编程之美优秀选手唐飞虎经验分享</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			他是14年编程之美挑战赛的全国总冠军孙祥彦的高中室友，从小学开始一路保送到大学，是哈尔滨工业大学的叱咤风云的“传说中的学长”，是腼腆羞涩却心怀青春热血的创业达人，是特立独行执行力超强的编程高手，是近乎偏执沉迷于编程世界的疯狂极客，他也是15年编程之美挑战赛的全国总冠军。在本期分享中，唐飞虎将于你分享他的个人创业经历，决赛项目经验，赛后生活，职业规划及求职技巧。
+		
+classtime:1课时
+							34分钟
+classlevel:初级
+learnnum:3235人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2702.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2702&posColumn=2702.9">Revel 开发高级阶段之数据存储
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2702.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2702&posColumn=2702.9">Revel 开发高级阶段之数据存储</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程在前面课程的基础上，将对常见关系型数据库的 Mysql 以及非关系型数据库 MongoDB 作简要的介绍；同时也将详细讲解在 Revel 框架中如何设置 Mysql 和 Mongodb的ORM，以及如何借助于 ORM 对数据库进行简单的 CRUD 操作。
+		
+classtime:3课时
+							88分钟
+classlevel:初级
+learnnum:2287人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2701.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2701&posColumn=2701.10">物联网技术导论（十）物联网中的智能决策
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2701.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2701&posColumn=2701.10">物联网技术导论（十）物联网中的智能决策</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍数据挖掘的基本流程（预处理，数据挖掘，知识评估与表示），重点介绍几种典型的数据挖掘算法，最后讨论物联网中智能决策的新特点。
+		
+classtime:3课时
+							36分钟
+classlevel:初级
+learnnum:2420人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2700.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2700&posColumn=2700.11">开发远程控制程序高级功能
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2700.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2700&posColumn=2700.11">开发远程控制程序高级功能</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解在图形化远程控制程序的基础上，实现读写剪贴板，查看远程受控电脑的屏幕和上传文件等高级功能。
+		
+classtime:5课时
+							48分钟
+classlevel:中级
+learnnum:2564人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2699.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2699&posColumn=2699.12">Android 应用结构与实例
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2699.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2699&posColumn=2699.12">Android 应用结构与实例</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主讲 Android 手机应用的结构，状态栏、应用栏、菜单、工具栏、侧边导航；通过布局实例深入讲解应用结构的设计标准。
+		
+classtime:3课时
+							40分钟
+classlevel:初级
+learnnum:2708人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2698.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2698&posColumn=2698.13">如何提升 APP 防御能力
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2698.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2698&posColumn=2698.13">如何提升 APP 防御能力</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			2015年安卓应用盗版情况不断恶化，平均1款正版 APP 背后藏着92个盗版，比2014年增长了3.5倍。面对如此猖獗的盗版现象，本课程将向开发者讲解提升 APP 安全的常见手段，APP 加固后文件发生的变化以及如何使用360加固助手。
+		
+classtime:4课时
+							44分钟
+classlevel:中级
+learnnum:3228人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2697.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2697&posColumn=2697.14">Laravel 入门之路由
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2697.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2697&posColumn=2697.14">Laravel 入门之路由</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Laravel 中的路由，结合一些简单的小例子，让学习者对 Laravel 中的路由有更深刻的了解。
+		
+classtime:4课时
+							51分钟
+classlevel:初级
+learnnum:2899人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2688.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2688&posColumn=2688.15">Python 类深入
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2688.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2688&posColumn=2688.15">Python 类深入</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程在已经掌握的有关类的知识基础上，对类和实例的某些特殊方法、属性进行深入探究，并梳理对类的认识，用特殊方法定制简单的类，还要了解迭代器和生成器的特点及应用。
+		
+classtime:3课时
+							39分钟
+classlevel:初级
+learnnum:2868人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2689.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2689&posColumn=2689.16">Android 基准网格、边距与布局标准
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2689.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2689&posColumn=2689.16">Android 基准网格、边距与布局标准</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程引入 Android 布局实例，主讲 Android 的基准网格原则、元素对齐、边距以及尺寸原则；解析比例布局原理与技巧。
+		
+classtime:4课时
+							34分钟
+classlevel:初级
+learnnum:3048人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2687.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2687&posColumn=2687.17">Phaser.js 中的物理引擎
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2687.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2687&posColumn=2687.17">Phaser.js 中的物理引擎</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要介绍 Phaser.js 中的几种物理引擎，以及其中最基础的 Arcade 物理引擎的使用方法。
+		
+classtime:3课时
+							38分钟
+classlevel:初级
+learnnum:2418人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2686.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2686&posColumn=2686.18">Hadoop MapReduce 入门
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2686.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2686&posColumn=2686.18">Hadoop MapReduce 入门</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解 Hadoop 核心之一的 MapReduce 相关概念，并在 Windows 中演示安装 Eclipse 运行 MapReduce 的插件，编写运行词频统计测试。
+		
+classtime:3课时
+							56分钟
+classlevel:高级
+learnnum:3157人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2685.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2685&posColumn=2685.19">BitmapDrawable、NinePatchDrawable 和 PictureDrawable 类型精讲
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2685.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2685&posColumn=2685.19">BitmapDrawable、NinePatchDrawable 和 PictureDrawable 类型精讲</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程先讲述 BitmapDrawable 原理和使用，然后讲述 NinePatchDrawable 和 PictureDrawable的原理和使用，最后做课程总结。
+		
+classtime:3课时
+							27分钟
+classlevel:初级
+learnnum:2739人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2684.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2684&posColumn=2684.20">WebService 概述
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2684.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2684&posColumn=2684.20">WebService 概述</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程通过 WebService 的学习，学会什么是 WebService、WebService 的工作原理、SOAP 结构分析、WSDL 结构分析、WebService 注解以及 WebService 的优缺点。
+		
+classtime:5课时
+							61分钟
+classlevel:初级
+learnnum:6037人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2681.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2681&posColumn=2681.21">wxPython 环境搭建及可视化编程
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2681.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2681&posColumn=2681.21">wxPython 环境搭建及可视化编程</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程会讲解 wxPython 环境搭建及可视化编程，包括 Windows 下搭建wxPython环境、MAC下搭建 wxPython 环境、可视化编程实现等知识，并结合实际案例进行讲解 wxPython 环境搭建及可视化编程，加深大家的理解。
+		
+classtime:3课时
+							106分钟
+classlevel:中级
+learnnum:2704人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2680.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2680&posColumn=2680.22">使用 Alamofire 请求网络
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2680.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2680&posColumn=2680.22">使用 Alamofire 请求网络</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			学完本课程后能够熟悉 Alamofire 的基本操作和 HTTP 的一些知识。
+
+		
+classtime:3课时
+							49分钟
+classlevel:高级
+learnnum:2712人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2679.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2679&posColumn=2679.23">Android logcat 命令使用
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2679.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2679&posColumn=2679.23">Android logcat 命令使用</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程详细介绍 logcat 工具，什么是 logcat 命令和 logcat命令的子命令与参数的详解。在本课程中可以学习到 logcat 的格式化输出，获取不同缓冲区的 log ，分级过滤，TAG 过滤等重要功能的使用。
+		
+classtime:5课时
+							49分钟
+classlevel:初级
+learnnum:2526人学习
+
+title:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2677.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2677&posColumn=2677.24">数据结构与算法之位运算
+content:
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2677.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=2677&posColumn=2677.24">数据结构与算法之位运算</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍位运算的相关知识。位运算相关的算法是面试中的高频题，我们会从基础开始详细介绍位运算的各方面知识，并对经典算法进行深入剖析，给出不同的解决方案。
+		
+classtime:3课时
+							54分钟
+classlevel:中级
+learnnum:3008人学习
+

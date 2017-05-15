@@ -33,6 +33,7 @@ importlib.reload(sys)
 #sys.setdefaultencoding('utf-8')
 
 # get function name
+
 #
 
 """
@@ -53,7 +54,31 @@ a="Runoob"
 例如: sum = lambda arg1, arg2: arg1 + arg2;
 print ("相加后的值为 : ", sum( 10, 20 ))
 
-FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
+
+ 知识点1:
+python 使用 lambda 来创建匿名函数(匿名: 不使用 def 标准的形式定义函数)
+案例:
+sum = lambda arg1, arg2: arg1 + arg2;
+print ("相加后的值为 : ", sum( 10, 20 ))
+说明:
+lambda 只是一个表达式，函数体比 def 简单很多。
+lambda 的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。
+lambda 函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。
+lambda 函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存从而增加运行效率。
+
+本例: FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
+FuncName 函数用于
+
+try:
+    .....
+except (Exception) as e:
+    print ('Exp {0} : {1}'.format(FuncName(), e))
+
+    首先，执行try子句（在关键字try和关键字except之间的语句）
+如果没有异常发生，忽略except子句，try子句执行后结束。
+如果在执行try子句的过程中发生了异常，那么try子句余下的部分将被忽略。如果异常的类型和 except 之后的名称相符，那么对应的except子句将被执行。最后执行 try 语句之后的代码。
+如果一个异常没有与任何的except匹配，那么这个异常将会传递给上层的try中。
+
 解释:
     传入:FuncName(x),x不传,使用默认值 n=0.
     sys._getframe().f_code.co_filename  #当前文件名，可以通过__file__获得
@@ -63,15 +88,14 @@ FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
 
 """
 def get_cur_info():
-    print ("1:",sys._getframe().f_code.co_filename,"哈哈")#当前文件名
-    print (sys._getframe(0).f_code.co_name)#调用该函数的函数的名字
-    print (sys._getframe(1).f_code.co_name)#该函数,没有被调用,返回 <module>
-    print (sys._getframe().f_lineno)
+    print ('当前路径文件名:',sys._getframe().f_code.co_filename,"哈哈")
+    print ('当前函数名:',sys._getframe(0).f_code.co_name)
+    print ('调用函数名,没调用 module:',sys._getframe(1).f_code.co_name)
+    print ('当前行号:',sys._getframe().f_lineno)
 
 
 # #打印函数名以及是否调用:
 FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
-
 
 def tags_val(tag, key='', index=0):
     '''
@@ -82,6 +106,7 @@ def tags_val(tag, key='', index=0):
         return ''
     elif key:
         txt = tag[index].get(key)
+        # strip(aa) 方法用于移除字符串头尾指定的字符aa（默认为空格）
         return txt.strip(' \t\r\n') if txt else ''
     else:
         txt = tag[index].text
@@ -125,7 +150,7 @@ class JDWrapper(object):
         self.login = 'https://passport.jd.com/uc/loginService'
         self.imag = 'https://authcode.jd.com/verify/image'
         self.auth = 'https://passport.jd.com/uc/showAuthCode'
-
+        # requests.Session()会话对象能够实现跨请求保持某些参数。它也会在同一个 Session 实例发出的所有请求之间保持 cookie
         self.sess = requests.Session()
 
         self.headers = {
@@ -185,8 +210,15 @@ class JDWrapper(object):
         print (u'获取是否需要验证码失败')
         return False
 
+    """ 获取二维码代码:
+    os.path.join(A, B),路径拼接
+    os.getcwd() ,返回当前进程的工作目录
+    time.time() 返回当前时间的时间戳
+    int(time.time() * 1000) 当前时间的毫秒表示
+    """
+
     def _get_auth_code(self, uuid):
-        # image save path
+        # 图片保存路径:
         image_file = os.path.join(os.getcwd(), 'authcode.jfif')
 
         payload = {
@@ -210,6 +242,9 @@ class JDWrapper(object):
 
         os.system('start ' + image_file)
         return str(input('Auth Code: '))
+
+    # random.random()
+    # 用于生成一个随机浮点数
 
     def _login_once(self, login_data):
         # url parameter
@@ -521,7 +556,7 @@ class JDWrapper(object):
         # stock_str = u'有货' if good_data['stock'] == 33 else u'无货'
 
         print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-        print (u'{0} > 商品详情'.format(time.ctime()))
+        print (u'{0} >>>>>>>>>>>>>>>>>>>>> 商品详情'.format(time.ctime()))
         print (u'编号：{0}'.format(good_data['id']))
         print (u'库存：{0}'.format(good_data['stockName']))
         print (u'价格：{0}'.format(good_data['price']))
@@ -591,7 +626,7 @@ class JDWrapper(object):
                 return False
 
             print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-            print (u'{0} > 购买详情'.format(time.ctime()))
+            print (u'{0} >>>>>>>>>>>>>>>>>>>>> 购买详情'.format(time.ctime()))
             print (u'结果：{0}'.format(tags_val(tag)))
 
             # change count
@@ -635,43 +670,72 @@ class JDWrapper(object):
 
         return False
 
-    def cart_detail(self):
-        # list all goods detail in cart
-        cart_url = 'https://cart.jd.com/cart.action'
-        cart_header = u'购买    数量    价格        总价        商品'
-        cart_format = u'{0:8}{1:8}{2:12}{3:12}{4}'
 
-        try:
-            resp = self.sess.get(cart_url, cookies=self.cookies)
-            resp.encoding = 'utf-8'
-            soup = bs4.BeautifulSoup(resp.text, "html.parser")
 
-            print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-            print (u'{0} > 购物车明细'.format(time.ctime()))
-            print (cart_header)
 
-            for item in soup.select('div.item-form'):
-                check = tags_val(item.select('div.cart-checkbox input'), key='checked')
-                check = ' + ' if check else ' - '
-                count = tags_val(item.select('div.quantity-form input'), key='value')
-                price = tags_val(item.select('div.p-price strong'))
-                sums = tags_val(item.select('div.p-sum strong'))
-                gname = tags_val(item.select('div.p-name a'))
-                #: ￥字符解析出错, 输出忽略￥
-                print (cart_format.format(check, count, price[1:], sums[1:], gname))
+"""
+<div class="item-form">
+   <div class="cell p-goods">
+   <div class="item-form">
+   <div class="item-form">
+   <div class="item-form">
+   <div class="item-form">
+   <div class="item-form">
+"""
 
-            t_count = tags_val(soup.select('div.amount-sum em'))
-            t_value = tags_val(soup.select('span.sumPrice em'))
-            print (u'总数: {0}'.format(t_count))
-            print (u'总额: {0}'.format(t_value[1:]))
 
-        except (Exception) as e:
-            print ('Exp {0} : {1}'.format(FuncName(), e))
+'''
+数据结构:
+< div class = "item-form"> 包裹着订单总信息
+    <div class = "p-quantity">数量
+<div class = "quantity-form">数量
+    <input >数量
+<div class = "p-price">单价
+    <strong>单价</strong>
+<div class = "p-sum"> 总价
+    <strong>总价</strong>
+<div class = "p-goods">商品信息
+    <div class = "item-msg">商品名称
+        <div class = "p-name">商品名称
+            <a>商品名称
+'''
+def cart_detail(self):
+    # list all goods detail in cart
+    cart_url = 'https://cart.jd.com/cart.action'
+    cart_header = u'购买    数量    价格        总价        商品'
+    cart_format = u'{0:8}{1:8}{2:12}{3:12}{4}'
+
+    try:
+        resp = self.sess.get(cart_url, cookies=self.cookies)
+        resp.encoding = 'utf-8'
+        soup = bs4.BeautifulSoup(resp.text, "html.parser")
+
+        print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+        print (u'{0} >>>>>>>>>>>>>>>>>>>>>> 购物车明细'.format(time.ctime()))
+        print (cart_header)
+
+        for item in soup.select('div.item-form'):
+            check = tags_val(item.select('div.cart-checkbox input'), key='checked')
+            check = ' + ' if check else ' - '
+            count = tags_val(item.select('div.quantity-form input'), key='value')
+            price = tags_val(item.select('div.p-price strong'))
+            sums = tags_val(item.select('div.p-sum strong'))
+            gname = tags_val(item.select('div.p-name a'))
+            #: ￥字符解析出错, 输出忽略￥
+            print (cart_format.format(check, count, price[1:], sums[1:], gname))
+
+        t_count = tags_val(soup.select('div.amount-sum em'))
+        t_value = tags_val(soup.select('span.sumPrice em'))
+        print (u'总数: {0}'.format(t_count))
+        print (u'总额: {0}'.format(t_value[1:]))
+
+    except (Exception) as e:
+        print ('Exp {0} : {1}'.format(FuncName(), e))
 
     def order_info(self, submit=False):
         # get order info detail, and submit order
         print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-        print (u'{0} > 订单详情'.format(time.ctime()))
+        print (u'{0} >>>>>>>>>>>>>>>>>>>>> 订单详情'.format(time.ctime()))
 
         try:
             order_url = 'http://trade.jd.com/shopping/order/getOrderInfo.action'
@@ -732,7 +796,19 @@ class JDWrapper(object):
 
         return False
 
+"""
+代码中经常会有变量是否为None的判断，有三种主要的写法：
+ 第一种是`if x is None`；
+第二种是 `if not x：`；
+第三种是`if not x is None`（这句这样理解更清晰`if not (x is None)`）
+结论：
+`if x is not None`是最好的写法，清晰，不会出现错误，以后坚持使用这种写法。
+使用if not x这种写法的前提是：必须清楚x等于None,  False, 空字符串"", 0, 空列表[], 空字典{}, 空元组()时对你的判断没有影响才行。
 
+
+while not jd.buy(options) and options.flush:
+ ----not jd.buy(options) 为真---- options.flush为真,则执行后边的语句
+"""
 def main(options):
     #
     jd = JDWrapper()
@@ -742,8 +818,16 @@ def main(options):
     while not jd.buy(options) and options.flush:
         time.sleep(options.wait / 1000.0)
 
-
+"""
+flush() 方法是用来刷新缓冲区的，即将缓冲区中的数据立刻写入文件，同时清空缓冲区，不需要是被动的等待输出缓冲区写入。
+一般情况下，文件关闭后会自动刷新缓冲区，但有时你需要在关闭前刷新它，这时就可以使用 flush() 方法。
+"""
 if __name__ == '__main__':
+
+    # 编程测试
+    get_cur_info()
+
+    # 命令行解析模块: 方便在命令行通过 help 形式展示帮助信息
 
     # help message
     parser = argparse.ArgumentParser(description='Simulate to login Jing Dong, and buy sepecified good')
