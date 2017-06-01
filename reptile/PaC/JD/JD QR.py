@@ -152,7 +152,7 @@ class JDWrapper(object):
         self.auth = 'https://passport.jd.com/uc/showAuthCode'
         # requests.Session()会话对象能够实现跨请求保持某些参数。它也会在同一个 Session 实例发出的所有请求之间保持 cookie
         self.sess = requests.Session()
-
+        self.sess.trust_env = False
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
             'ContentType': 'text/html; charset=utf-8',

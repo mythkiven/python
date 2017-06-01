@@ -165,13 +165,17 @@ class JDWrapper(object):
             'Accept-Encoding': 'gzip, deflate, sdch',
             'Accept-Language': 'zh-CN,zh;q=0.8',
             'Connection': 'keep-alive',
+
         }
         #保存 cookie
-        self.cookie = {
+        self.cookies = {
 
         }
         # requests.Session()会话对象能够实现跨请求保持某些参数。它也会在同一个 Session 实例发出的所有请求之间保持 cookie
         self.sess = requests.Session()
+        # 处理代理错误: Caused by ProxyError('Cannot connect to proxy.'
+        # trust_env:取用系統環境變數 =False，將忽略以下系統參數:系統的 proxys/.netrc 的身份認證/定義在 REQUESTS_CA_BUNDLE 中的 CA bundles CURL_CA_BUNDLE
+        self.sess.trust_env = False
 
     def login_by_QR(self):
 
@@ -189,20 +193,21 @@ class JDWrapper(object):
                 urls[0],
                 headers=self.headers
             )
-            print (resp.cookies.status_code)
+            # print (resp.cookies.status_code)
             #1-2-判断登录是否成功
             if resp.status_code != requests.codes.OK:
-                print (u'获取登录页面失败:%u',resp.status_code)
-                return  False
+                print(u'获取登录页面失败:%u',resp.status_code)
+                return False
+
             #1-3- save cookie
             for k,v in resp.cookies.items():
-                self.cookie[k]=v
+                self.cookies[k]=v
 
             #1-4- 获取二维码图片:
             resp = self.sess.get(
                 urls[1],
                 headers=self.headers,
-                cookies=self.cookie,
+                cookies=self.cookies,
                 params={
                     'appid':133,
                     'size':147,
@@ -215,22 +220,24 @@ class JDWrapper(object):
                 return False
             #1-6-save cookie
             for k,v in resp.cookies.items():
-                self.cookie[k]=v
+                self.cookies[k]=v
 
             #1-7- save QR
-            qr_image_file = 'jd_qr.png'
-            with open(qr_image_file,'wb') as f:
+            image_file  = 'qr.png' #os.path.join(os.getcwd(), 'jd_qr.png')
+
+            with open(image_file,'wb') as f: # wb 以二进制写模式打开. rb 以二进制读模式打开
                 for chunk in resp.iter_content(chunk_size=1024):
                     f.write(chunk)
 
             #1-8- 开始扫描二维码:
-            os.system('start'+qr_image_file)
+            os.system('start ' + image_file)
+
             self.headers['Host'] ='qr.m.jd.com'
             self.headers['Referer'] ='https://passport.jd.com/new/login.aspx'
             qr_ticket = None
             retry_times = 100
             while retry_times:
-                retry_times -=1
+                retry_times -= 1
                 resp = self.sess.get(
                     urls[2],
                     headers=self.headers,
@@ -246,19 +253,41 @@ class JDWrapper(object):
                 #状态的判断
                 if resp.status_code != requests.codes.OK:
                     continue
-                n1 = resp.text.find()
-                n2 = resp.text.find()
+                print ('6666666'+resp.text+'666666')
+                n1 = resp.text.find('(')
+                n2 = resp.text.find(')')
                 # json.loads() 将一个JSON编码的字符串转换回一个Python数据结构：
                 rs = json.loads(resp.text[n1+1:n2])
                 if rs['code'] == 200:
-                    print (u'{}:{}'.format(rs['code'],rs['msg']))
-                    qr_ticket=rs['ticket']
+                    print (u'成功状态码:{} :  ticket:{}'.format(rs['code'], rs['ticket']))
+                    qr_ticket = rs['ticket']
                     break
                 else:
+                    print (u'状态码:{} --- 消息:{}'.format(rs['code'], rs['msg']))
                     time.sleep(3)
             if not qr_ticket:
                 print ('二维码登录失败')
                 return  False
+
+            self.headers['Host'] = 'passport.jd.com'
+            self.headers['Referer'] = 'https://passport.jd.com/uc/login?ltype=logout'
+            resp = self.sess.get(
+                urls[3],
+                headers = self.headers,
+                cookies = self.cookies,
+                params = {'t',qr_ticket},
+            )
+            if resp.status_code != requests.codes.OK:
+                print (u'二维码登录失败,状态码:%u',resp.status_code)
+                return False
+
+            self.headers['P3P'] = resp.headers.get('P3P')
+            for (k,v) in resp.cookies.items():
+                self.cookies[k] = v
+
+            print (u'登陆成功')
+
+            return Ture
 
         except Exception as e:
             print ('Exp:', e)
@@ -268,8 +297,29 @@ class JDWrapper(object):
 
 
 
+# def main(options):
+    #
 jd = JDWrapper()
 jd.login_by_QR()
+        # return
+
+    # jd.getPage()
+
+
+#
+#
+# if __name__ == '__main__':
+#
+#     # get_cur_info()
+#
+#     parser = argparse.ArgumentParser(description='Simulate to login Jing Dong, and buy sepecified good')
+#
+#
+#     options = parser.parse_args()
+#     print (options)
+#
+#     main(options)
+
 
 
 
