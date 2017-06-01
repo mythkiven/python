@@ -27,6 +27,26 @@
     <window id="1">
       <content type="file-editors">
         <state>
+          <leaf>
+            <file leaf-file-name="JD Exercise.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/JD Exercise.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="285">
+                    <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+                    <folding>
+                      <element signature="e#28#49#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="JD learn.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/JD learn.py">
@@ -58,35 +78,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JD QR.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JD QR.py">
+      <file leaf-file-name="JD Login.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JD Login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="224" column="19" selection-start-line="224" selection-start-column="19" selection-end-line="224" selection-end-column="19" />
+            <state relative-caret-position="-4155">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
-                <element signature="e#188#198#0" expanded="true" />
+                <element signature="e#38#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JD Exercise.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JD Exercise.py">
+      <file leaf-file-name="JD QR.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JD QR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JD Login.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JD Login.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6885">
-              <caret line="459" column="30" selection-start-line="459" selection-start-column="30" selection-end-line="459" selection-end-column="30" />
+            <state relative-caret-position="1741">
+              <caret line="224" column="19" selection-start-line="224" selection-start-column="19" selection-end-line="224" selection-end-column="19" />
               <folding>
-                <element signature="e#38#48#0" expanded="true" />
+                <element signature="e#188#198#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,8 +129,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="303" />
-    <option name="y" value="87" />
+    <option name="x" value="-100" />
+    <option name="y" value="133" />
     <option name="width" value="1322" />
     <option name="height" value="912" />
   </component>
@@ -501,7 +511,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="303" y="87" width="1322" height="912" extended-state="0" />
+    <frame x="-100" y="133" width="1322" height="912" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26484376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -742,27 +752,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qr.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JD learn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2963">
           <caret line="285" column="35" selection-start-line="285" selection-start-column="35" selection-end-line="285" selection-end-column="35" />
           <folding>
             <element signature="e#17#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JD QR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="224" column="19" selection-start-line="224" selection-start-column="19" selection-end-line="224" selection-end-column="19" />
-          <folding>
-            <element signature="e#188#198#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -791,20 +786,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JD Exercise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/qr.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JD Login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6885">
-          <caret line="459" column="30" selection-start-line="459" selection-start-column="30" selection-end-line="459" selection-end-column="30" />
+        <state relative-caret-position="-4155">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#38#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD QR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1741">
+          <caret line="224" column="19" selection-start-line="224" selection-start-column="19" selection-end-line="224" selection-end-column="19" />
+          <folding>
+            <element signature="e#188#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD Exercise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="e#28#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
