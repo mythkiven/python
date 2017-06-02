@@ -165,180 +165,6 @@ class JDWrapper(object):
             exit(1)
         '''
 
-    # @staticmethod
-    # def print_json(resp_text):
-    #     '''
-    #     format the response content
-    #     '''
-    #     if resp_text[0] == '(':
-    #         resp_text = resp_text[1:-1]
-    #
-    #     for k, v in json.loads(resp_text).items():
-    #         print (u'%s : %s', (k, v))
-    #
-    # @staticmethod
-    # def response_status(resp):
-    #     if resp.status_code != requests.codes.OK:
-    #         print ('Status: %u, Url: %s', (resp.status_code, resp.url))
-    #         return False
-    #     return True
-    #
-    # def _need_auth_code(self, usr_name):
-    #     # check if need auth code
-    #     #
-    #     auth_dat = {
-    #         'loginName': usr_name,
-    #     }
-    #     payload = {
-    #         'r': random.random(),
-    #         'version': 2015
-    #     }
-    #
-    #     resp = self.sess.post(self.auth, data=auth_dat, params=payload)
-    #     if self.response_status(resp):
-    #         js = json.loads(resp.text[1:-1])
-    #         return js['verifycode']
-    #
-    #     print (u'获取是否需要验证码失败')
-    #     return False
-    #
-    # """ 获取二维码代码:
-    # os.path.join(A, B),路径拼接
-    # os.getcwd() ,返回当前进程的工作目录
-    # time.time() 返回当前时间的时间戳
-    # int(time.time() * 1000) 当前时间的毫秒表示
-    # """
-    #
-    # def _get_auth_code(self, uuid):
-    #     # 图片保存路径:
-    #     image_file = os.path.join(os.getcwd(), 'authcode.jfif')
-    #
-    #     payload = {
-    #         'a': 1,
-    #         'acid': uuid,
-    #         'uid': uuid,
-    #         'yys': str(int(time.time() * 1000)),
-    #     }
-    #
-    #     # get auth code
-    #     r = self.sess.get(self.imag, params=payload)
-    #     if not self.response_status(r):
-    #         print (u'获取验证码失败')
-    #         return False
-    #
-    #     with open(image_file, 'wb') as f:
-    #         for chunk in r.iter_content(chunk_size=1024):
-    #             f.write(chunk)
-    #
-    #         f.close()
-    #
-    #     os.system('start ' + image_file)
-    #     return str(input('Auth Code: '))
-    #
-    # # random.random()
-    # # 用于生成一个随机浮点数
-    #
-    # def _login_once(self, login_data):
-    #     # url parameter
-    #     payload = {
-    #         'r': random.random(),
-    #         'uuid': login_data['uuid'],
-    #         'version': 2015,
-    #     }
-    #
-    #     resp = self.sess.post(self.login, data=login_data, params=payload)
-    #     if self.response_status(resp):
-    #         js = json.loads(resp.text[1:-1])
-    #         # self.print_json(resp.text)
-    #
-    #         if not js.get('success'):
-    #             print  (js.get('emptyAuthcode'))
-    #             return False
-    #         else:
-    #             return True
-    #
-    #     return False
-    #
-    # def _login_try(self):
-    #     """ login by username and password, but not working now.
-    #
-    #     .. deprecated::
-    #         Use `login_by_QR`
-    #     """
-    #     # get login page
-    #     # resp = self.sess.get(self.home)
-    #     print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-    #     print (u'{0} > 登陆'.format(time.ctime()))
-    #
-    #     try:
-    #         # 2016/09/17 PhantomJS can't login anymore
-    #         self.browser.get(self.home)
-    #         soup = bs4.BeautifulSoup(self.browser.page_source, "html.parser")
-    #
-    #         # set cookies from PhantomJS
-    #         for cookie in self.browser.get_cookies():
-    #             self.sess.cookies[cookie['name']] = str(cookie['value'])
-    #
-    #         # for (k, v) in self.sess.cookies.items():
-    #         # 	print '%s: %s' % (k, v)
-    #
-    #
-    #
-    #         # response data hidden input == 9 ??. Changed
-    #         inputs = soup.select('form#formlogin input[type=hidden]')
-    #         rand_name = inputs[-1]['name']
-    #         rand_data = inputs[-1]['value']
-    #         token = ''
-    #
-    #         for idx in range(len(inputs) - 1):
-    #             id = inputs[idx]['id']
-    #             va = inputs[idx]['value']
-    #             if id == 'token':
-    #                 token = va
-    #             elif id == 'uuid':
-    #                 self.uuid = va
-    #             elif id == 'eid':
-    #                 self.eid = va
-    #             elif id == 'sessionId':
-    #                 self.fp = va
-    #
-    #         auth_code = ''
-    #         if self.need_auth_code(self.usr_name):
-    #             auth_code = self.get_auth_code(self.uuid)
-    #         else:
-    #             print (u'无验证码登陆')
-    #
-    #         login_data = {
-    #             '_t': token,
-    #             'authcode': auth_code,
-    #             'chkRememberMe': 'on',
-    #             'loginType': 'f',
-    #             'uuid': self.uuid,
-    #             'eid': self.eid,
-    #             'fp': self.fp,
-    #             'nloginpwd': self.usr_pwd,
-    #             'loginname': self.usr_name,
-    #             'loginpwd': self.usr_pwd,
-    #             rand_name: rand_data,
-    #         }
-    #
-    #         login_succeed = self.login_once(login_data)
-    #         if login_succeed:
-    #             self.trackid = self.sess.cookies['TrackID']
-    #             print (u'登陆成功 %s', self.usr_name)
-    #         else:
-    #             print (u'登陆失败 %s', self.usr_name)
-    #
-    #         return login_succeed
-    #
-    #     # 旧:except Exception, e:
-    #     except (Exception) as e:
-    #         print ('Exception:', e.message)
-    #         raise
-    #     finally:
-    #         self.browser.quit()
-    #
-    #     return False
 
     def login_by_QR(self):
         # jd login by QR code
@@ -464,67 +290,67 @@ class JDWrapper(object):
         return False
 
 
-#
-#     def getPage(self):
-#         print ('登录成功, 获取对应的web页面')
-#         # 登录成功, 获取对应的web页面
-#
-#
-#         # 我的购物车页面:
-#         stock_link = 'https://cart.jd.com/cart.action'
-#         resp = self.sess.get(stock_link)
-#         soup = bs4.BeautifulSoup(resp.text, "html.parser")
-#         f = open(os.path.join(os.getcwd(), "我的购物车页面.txt")  , 'a+')
-#         f.writelines( soup.prettify())
-#         f.close()
-#
-#
-#         # 我的关注页面:
-#         stock_link2 = 'https://t.jd.com/home/follow'
-#         resp2 = self.sess.get(stock_link2)
-#         soup2 = bs4.BeautifulSoup(resp2.text, "html.parser")
-#         f = open(os.path.join(os.getcwd(), "关注页面.txt"), 'a+')
-#         f.writelines(soup.prettify())
-#         f.close()
-#
-#         # 我的订单页面:
-#         stock_link3 = 'https://order.jd.com/center/list.action?search=0&d=2&s=4096'
-#         resp3 = self.sess.get(stock_link3)
-#         soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
-#         f = open(os.path.join(os.getcwd(), "订单页面.txt"), 'a+')
-#         f.writelines(soup.prettify())
-#         f.close()
-#
-#         # # 我的金库页面:
-#         # stock_link4 = 'https://jinku.jd.com/xjk/income.action'
-#         # resp4 = self.sess.get(stock_link4)
-#         # soup4 = bs4.BeautifulSoup(resp4.text, "html.parser")
-#         # print ('我的金库页面::', soup4)
-#         #
-#         # f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
-#         # f.writelines(soup.prettify())
-#         # f.close()
-#         #
-#         #
-#         # # 我的JD资产页面:
-#         # stock_link3 = 'https://jinku.jd.com/xjk/income.action'
-#         # resp3 = self.sess.get(stock_link3)
-#         # soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
-#         # print ('我的JD 资产页面::', soup3)
-#         #
-#         # f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
-#         # f.writelines(soup.prettify())
-#         # f.close()
-#         #
-#         # # 我的JD白条页面:
-#         # stock_link3 = 'https://jinku.jd.com/xjk/income.action'
-#         # resp3 = self.sess.get(stock_link3)
-#         # soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
-#         # print ('我的JD白条页面::', soup3)
-#         #
-#         # f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
-#         # f.writelines(soup.prettify())
-#         # f.close()
+
+    def getPage(self):
+        print ('登录成功, 获取对应的web页面')
+        # 登录成功, 获取对应的web页面
+
+
+        # 我的购物车页面:
+        stock_link = 'https://cart.jd.com/cart.action'
+        resp = self.sess.get(stock_link)
+        soup = bs4.BeautifulSoup(resp.text, "html.parser")
+        f = open(os.path.join(os.getcwd(), "我的购物车页面.txt")  , 'a+')
+        f.writelines( soup.prettify())
+        f.close()
+
+
+        # 我的关注页面:
+        stock_link2 = 'https://t.jd.com/home/follow'
+        resp2 = self.sess.get(stock_link2)
+        soup2 = bs4.BeautifulSoup(resp2.text, "html.parser")
+        f = open(os.path.join(os.getcwd(), "关注页面.txt"), 'a+')
+        f.writelines(soup.prettify())
+        f.close()
+
+        # 我的订单页面:
+        stock_link3 = 'https://order.jd.com/center/list.action?search=0&d=2&s=4096'
+        resp3 = self.sess.get(stock_link3)
+        soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
+        f = open(os.path.join(os.getcwd(), "订单页面.txt"), 'a+')
+        f.writelines(soup.prettify())
+        f.close()
+
+        # # 我的金库页面:
+        # stock_link4 = 'https://jinku.jd.com/xjk/income.action'
+        # resp4 = self.sess.get(stock_link4)
+        # soup4 = bs4.BeautifulSoup(resp4.text, "html.parser")
+        # print ('我的金库页面::', soup4)
+        #
+        # f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
+        # f.writelines(soup.prettify())
+        # f.close()
+        #
+        #
+        # # 我的JD资产页面:
+        # stock_link3 = 'https://jinku.jd.com/xjk/income.action'
+        # resp3 = self.sess.get(stock_link3)
+        # soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
+        # print ('我的JD 资产页面::', soup3)
+        #
+        # f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
+        # f.writelines(soup.prettify())
+        # f.close()
+        #
+        # # 我的JD白条页面:
+        # stock_link3 = 'https://jinku.jd.com/xjk/income.action'
+        # resp3 = self.sess.get(stock_link3)
+        # soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
+        # print ('我的JD白条页面::', soup3)
+        #
+        # f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
+        # f.writelines(soup.prettify())
+        # f.close()
 #
 # """
 # 代码中经常会有变量是否为None的判断，有三种主要的写法：

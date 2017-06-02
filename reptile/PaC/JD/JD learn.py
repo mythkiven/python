@@ -273,9 +273,9 @@ class JDWrapper(object):
             self.headers['Referer'] = 'https://passport.jd.com/uc/login?ltype=logout'
             resp = self.sess.get(
                 urls[3],
-                headers = self.headers,
-                cookies = self.cookies,
-                params = {'t',qr_ticket},
+                headers=self.headers,
+                cookies=self.cookies,
+                params={'t': qr_ticket},
             )
             if resp.status_code != requests.codes.OK:
                 print (u'二维码登录失败,状态码:%u',resp.status_code)
@@ -287,7 +287,7 @@ class JDWrapper(object):
 
             print (u'登陆成功')
 
-            return Ture
+            return True
 
         except Exception as e:
             print ('Exp:', e)
@@ -295,15 +295,60 @@ class JDWrapper(object):
 
         return False
 
+    def getPage(self):
+        print ('登录成功, 获取对应的web页面')
+        # 登录成功, 获取对应的web页面
+
+        # 我的购物车页面:
+        stock_link = 'https://cart.jd.com/cart.action'
+        resp = self.sess.get(
+            stock_link)
+        soup = bs4.BeautifulSoup(resp.text, "html.parser")
+        f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
+        f.writelines(soup.prettify())
+        f.close()
+
+        # 我的关注页面:
+        stock_link2 = 'https://t.jd.com/home/follow'
+        resp2 = self.sess.get(
+            stock_link2, )
+        soup2 = bs4.BeautifulSoup(resp2.text, "html.parser")
+        f = open(os.path.join(os.getcwd(), "关注页面.txt"), 'a+')
+        f.writelines(soup.prettify())
+        f.close()
+
+        # 我的订单页面:
+        stock_link3 = 'https://order.jd.com/center/list.action?search=0&d=2&s=4096'
+        resp3 = self.sess.get(
+            stock_link3)
+        soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
+        f = open(os.path.join(os.getcwd(), "订单页面.txt"), 'a+')
+        f.writelines(soup.prettify())
+        f.close()
+
+        # list all goods detail in cart
+        cart_url = 'https://cart.jd.com/cart.action'
+        cart_header = u'购买    数量    价格        总价        商品'
+        cart_format = u'{0:8}{1:8}{2:12}{3:12}{4}'
+
+        resp = self.sess.get(cart_url, cookies=self.cookies)
+        resp.encoding = 'utf-8'
+        soup = bs4.BeautifulSoup(resp.text, "html.parser")
+
+        print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+        print (u'{0} >>>>>>>>>>>>>>>>>>>>>> 购物车明细'.format(time.ctime()))
+        print (resp.text)
 
 
-# def main(options):
+
+
+            # def main(options):
     #
 jd = JDWrapper()
 jd.login_by_QR()
         # return
 
-    # jd.getPage()
+jd.getPage()
 
 
 #
