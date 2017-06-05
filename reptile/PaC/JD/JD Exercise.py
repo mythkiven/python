@@ -10,6 +10,7 @@ import json # json 解析
 import random #随机数模块
 import bs4 # 解析网页
 
+
 #定义JD类 扫码登录类:
 
 FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
@@ -151,6 +152,8 @@ class JDLoginByQR():
             for k,v in resp.cookies.items():
                 self.cookies[k]=v
             print ('二维码登录成功')
+            f=open(os.path.join(os.getcwd(),"cookie.txt"),'wt')
+            
             return True
 
         except Exception as e:
@@ -159,26 +162,25 @@ class JDLoginByQR():
         return False
 
 
-    def getPage(self):
-
-        # list all goods detail in cart
+# 我的购物车详情:
+    def getGWCPage(self):
         cart_url = 'https://cart.jd.com/cart.action'
-        cart_header = u'购买    数量    价格        总价        商品'
-        cart_format = u'{0:8}{1:8}{2:12}{3:12}{4}'
-
+        cart_header = u'购买    数量    价格        总价       属性                        商品'
+        cart_format = u'{0:6}{1:6}{2:12}{3:12}({4:20}){5}'
         try:
             resp = self.request.get(cart_url, cookies=self.cookies)
             resp.encoding = 'utf-8'
             soup = bs4.BeautifulSoup(resp.text, "html.parser")
+            print ('+++++++++++++++++++++++读取购物车明细++++++++++++++++++++++++++++++++')
 
-            print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-            print (u'{0} >>>>>>>>>>>>>>>>>>>>>> 购物车明细'.format(time.ctime()))
-            print (cart_header)
-
-            f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'a+')
+            f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'wt')
             f.writelines(soup.prettify())
             f.close()
 
+            f = open(os.path.join(os.getcwd(), "我的购物车.txt"), 'wt')
+            f.writelines(cart_header)
+            f.writelines('\n')
+            f.close()
             for item in soup.select('div.item-form'):
                 check = tags_val(item.select('div.cart-checkbox input'), key='checked')
                 check = ' + ' if check else ' - '
@@ -186,45 +188,69 @@ class JDLoginByQR():
                 price = tags_val(item.select('div.p-price strong'))
                 sums = tags_val(item.select('div.p-sum strong'))
                 gname = tags_val(item.select('div.p-name a'))
-
+                propsTxt = tags_val(item.select('div.props-txt'))
                 f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
-                f.writelines(cart_header)
-                f.writelines(cart_format.format(check, count, price[1:], sums[1:], gname))
-                f.writelines('\n \n')
+                f.writelines(cart_format.format(check, count, price[1:], sums[1:], propsTxt, gname))
+                f.writelines('\n')
                 f.close()
-
-
             t_count = tags_val(soup.select('div.amount-sum em'))
-            t_value = tags_val(soup.select('span.sumPrice em'))
-            print (u'总数: {0}'.format(t_count))
-            print (u'总额: {0}'.format(t_value[1:]))
+            t_price = tags_val(soup.select('span.sumPrice em'))
+            f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
+            f.writelines('已选:' + t_count + '\n' + '总额:' + t_price)
+            f.writelines('\n')
+            f.close()
+        except (Exception) as e:
+            print ('Exp {0} : {1}'.format(FuncName(), e))
+#我的订单详情:
+    def getDDPage(self):
+        gwc_url = "http://order.jd.com/center/list.action?search=0&d=2&s=4096"
+        gwc_header="购买时间   订单号  商家  数量      价格      支付方式     状态      收货人       商品 "
+        cart_format = u'{0:6}{1:6}{2:8}{3:8}{4:8}{5:8}{6:8}{7:8}{8}'
+        #今年订单:
+        try:
+            resp_thisYear = self.request.get(gwc_url,params={'search':'0','d':'2','s':'4096'},)
+            resp_thisYear.encoding = 'utf-8'
+            soup = bs4.BeautifulSoup(resp_thisYear.text,"html.parser")
+            print ('+++++++++++++++读取订单详情+++++++++++++++')
+
+            f = open(os.path.join(os.getcwd(),"我的订单页面.html"),'wt')
+            f.writelines(soup.prettify())
+            f.close
+
+            f = open(os.path.join(os.getcwd(),"我的订单.txt"),'wt')
+            f.writelines(gwc_header)
+            f.close
+
+            # 所有的订单都以 tbody形式存在于 table 中.
+            for items in soup.select('table.oeder-tb'):
+                #时间
+                s_time = tags_val(items.select('span.dealtime'))
+                #订单号
+                s_orderNum = tags_val(items.select('a.orderIdLinks'))
+                #商家
+                s_orderInfo = tags_val(items.select('span.order-shop span.shop-txt'))
+                # 名称
+                s_orderName = tags_val(items.select('div.p-name a'))
+                #数量
+                s_goodsNum = tags_val(items.select('div.goods-number'))
+                #收货人
+                s_people = tags_val(items.select('div.consignee span.txt'))
+                #价格
+                s_price = tags_val(items.select('div.amount span'))
+                # 支付方式
+                s_payW = tags_val(items.select('div.amount span.ftx-13'))
+                #状态
+                s_status = tags_val(items.select('div.status span.order-status'))
+                f = open(os.path.join(os.getcwd(), "我的订单.txt"), 'a+')
+                f.writelines(cart_format.format(s_time,s_orderNum,s_orderInfo,s_goodsNum,s_price,s_payW,s_status,s_people,s_orderName))
+                f.writelines('\n')
+                f.close()
 
         except (Exception) as e:
             print ('Exp {0} : {1}'.format(FuncName(), e))
 
-        #
-        # # 登录成功, 获取对应的web页面
-        # print ('开始获取我的订单数据')
-        #
-        # # 我的购物车页面:
-        # order_url = 'http://order.jd.com/center/list.action'
-        # #今年订单
-        # resp_thisYear = self.request.get(order_url,cookies=self.cookies,params={search:'0',d:'2',s:'4096'})
-        # soup = bs4.BeautifulSoup(resp_thisYear.text, "html.parser")
-        # print ('我的订单数据写入本地')
-        # f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'a+')
-        # f.writelines(soup.prettify())
-        # f.close()
-        #
-        # print ('++++++++++++++++++++++++++++++++++++++++')
-        # print ('>>>>>>>>>>>>>>>>>>>今年我的订单明细:')
-        # for item in soup.select('tbody'):
-        #     check =
 
-
-
-
-def tags_val(tag, key='', index=0):
+def tags_val(tag, key='',index=0):
     '''
     return html tag list attribute @key @index
     if @key is empty, return tag content
@@ -233,7 +259,7 @@ def tags_val(tag, key='', index=0):
         return ''
     elif key:
         txt = tag[index].get(key)
-        # strip(aa) 方法用于移除字符串头尾指定的字符aa（默认为空格）
+        # strip(aa):移除字符串头尾指定的字符aa, 移除各种空格换行
         return txt.strip(' \t\r\n') if txt else ''
     else:
         txt = tag[index].text
@@ -254,42 +280,54 @@ def tag_val(tag, key=''):
         txt = tag.text
         return txt.strip(' \t\r\n') if txt else ''
 
+
+
+
+
+
+
 def get_locationPages():
 
     f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'r')
-
     soup = bs4.BeautifulSoup(f.read(), "html.parser")
-    cart_header = u'购买    数量    价格        总价        商品'
-    cart_format = u'{0:8}{1:8}{2:12}{3:12}{4}'
+    cart_header = u'已选    数量    价格        总价       属性                        商品'
+    cart_format = u'{0:6}{1:6}{2:12}{3:12}({4:20}){5}'
     print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
     f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'wt')
     f.writelines(cart_header)
     f.writelines('\n')
     f.close()
     for item in soup.select('div.item-form'):
+        #
         check = tags_val(item.select('div.cart-checkbox input'), key='checked')
         check = ' + ' if check else ' - '
         count = tags_val(item.select('div.quantity-form input'), key='value')
         price = tags_val(item.select('div.p-price strong'))
         sums = tags_val(item.select('div.p-sum strong'))
         gname = tags_val(item.select('div.p-name a'))
-
+        propsTxt = tags_val(item.select('div.props-txt'))
         f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
-        f.writelines(cart_format.format(check, count, price[1:], sums[1:], gname))
+        f.writelines(cart_format.format(check, count, price[1:], sums[1:],propsTxt, gname))
         f.writelines('\n')
         f.close()
-
-
+    t_count = tags_val(soup.select('div.amount-sum em'))
+    t_price = tags_val(soup.select('span.sumPrice em'))
+    f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
+    f.writelines('已选商品:'+t_count+'\n'+'商品总额:'+t_price)
+    f.writelines('\n')
+    f.close()
 
 def main():
-    get_locationPages()
+    # get_locationPages()
 
 
-    # jd = JDLoginByQR()
-    # if not jd.login_by_QR():
-    #     return
-    #
-    # jd.getPage()
+    jd = JDLoginByQR()
+    if not jd.login_by_QR():
+        return
+
+    jd.getDDPage()
+
+    # jd.getGWCPage()
 
 if __name__ == '__main__':
 
