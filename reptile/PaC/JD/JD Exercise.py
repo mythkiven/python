@@ -2,16 +2,17 @@
 
 
 # 导入模块:
-
+import sys
 import requests #网络模块
 import os   #系统模块
 import time # 日期模块
 import json # json 解析
 import random #随机数模块
-
 import bs4 # 解析网页
 
 #定义JD类 扫码登录类:
+
+FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
 
 class JDLoginByQR():
 
@@ -149,7 +150,7 @@ class JDLoginByQR():
                 return  False
             for k,v in resp.cookies.items():
                 self.cookies[k]=v
-
+            print ('二维码登录成功')
             return True
 
         except Exception as e:
@@ -159,45 +160,136 @@ class JDLoginByQR():
 
 
     def getPage(self):
-        print ('登录成功, 获取对应的web页面')
-        # 登录成功, 获取对应的web页面
 
-        # 我的购物车页面:
-        stock_link = 'https://cart.jd.com/cart.action'
-        resp = self.request.get(
-            stock_link)
-        soup = bs4.BeautifulSoup(resp.text, "html.parser")
-        f = open(os.path.join(os.getcwd(), "我的购物车页面.txt"), 'a+')
-        f.writelines(soup.prettify())
-        f.close()
+        # list all goods detail in cart
+        cart_url = 'https://cart.jd.com/cart.action'
+        cart_header = u'购买    数量    价格        总价        商品'
+        cart_format = u'{0:8}{1:8}{2:12}{3:12}{4}'
 
-        # 我的关注页面:
-        stock_link2 = 'https://t.jd.com/home/follow'
-        resp2 = self.request.get(
-            stock_link2,)
-        soup2 = bs4.BeautifulSoup(resp2.text, "html.parser")
-        f = open(os.path.join(os.getcwd(), "关注页面.txt"), 'a+')
-        f.writelines(soup.prettify())
-        f.close()
+        try:
+            resp = self.request.get(cart_url, cookies=self.cookies)
+            resp.encoding = 'utf-8'
+            soup = bs4.BeautifulSoup(resp.text, "html.parser")
 
-        # 我的订单页面:
-        stock_link3 = 'https://order.jd.com/center/list.action?search=0&d=2&s=4096'
-        resp3 = self.request.get(
-            stock_link3)
-        soup3 = bs4.BeautifulSoup(resp3.text, "html.parser")
-        f = open(os.path.join(os.getcwd(), "订单页面.txt"), 'a+')
-        f.writelines(soup.prettify())
+            print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+            print (u'{0} >>>>>>>>>>>>>>>>>>>>>> 购物车明细'.format(time.ctime()))
+            print (cart_header)
+
+            f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'a+')
+            f.writelines(soup.prettify())
+            f.close()
+
+            for item in soup.select('div.item-form'):
+                check = tags_val(item.select('div.cart-checkbox input'), key='checked')
+                check = ' + ' if check else ' - '
+                count = tags_val(item.select('div.quantity-form input'), key='value')
+                price = tags_val(item.select('div.p-price strong'))
+                sums = tags_val(item.select('div.p-sum strong'))
+                gname = tags_val(item.select('div.p-name a'))
+
+                f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
+                f.writelines(cart_header)
+                f.writelines(cart_format.format(check, count, price[1:], sums[1:], gname))
+                f.writelines('\n \n')
+                f.close()
+
+
+            t_count = tags_val(soup.select('div.amount-sum em'))
+            t_value = tags_val(soup.select('span.sumPrice em'))
+            print (u'总数: {0}'.format(t_count))
+            print (u'总额: {0}'.format(t_value[1:]))
+
+        except (Exception) as e:
+            print ('Exp {0} : {1}'.format(FuncName(), e))
+
+        #
+        # # 登录成功, 获取对应的web页面
+        # print ('开始获取我的订单数据')
+        #
+        # # 我的购物车页面:
+        # order_url = 'http://order.jd.com/center/list.action'
+        # #今年订单
+        # resp_thisYear = self.request.get(order_url,cookies=self.cookies,params={search:'0',d:'2',s:'4096'})
+        # soup = bs4.BeautifulSoup(resp_thisYear.text, "html.parser")
+        # print ('我的订单数据写入本地')
+        # f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'a+')
+        # f.writelines(soup.prettify())
+        # f.close()
+        #
+        # print ('++++++++++++++++++++++++++++++++++++++++')
+        # print ('>>>>>>>>>>>>>>>>>>>今年我的订单明细:')
+        # for item in soup.select('tbody'):
+        #     check =
+
+
+
+
+def tags_val(tag, key='', index=0):
+    '''
+    return html tag list attribute @key @index
+    if @key is empty, return tag content
+    '''
+    if len(tag) == 0 or len(tag) <= index:
+        return ''
+    elif key:
+        txt = tag[index].get(key)
+        # strip(aa) 方法用于移除字符串头尾指定的字符aa（默认为空格）
+        return txt.strip(' \t\r\n') if txt else ''
+    else:
+        txt = tag[index].text
+        return txt.strip(' \t\r\n') if txt else ''
+
+
+def tag_val(tag, key=''):
+    '''
+    return html tag attribute @key
+    if @key is empty, return tag content
+    '''
+    if tag is None:
+        return ''
+    elif key:
+        txt = tag.get(key)
+        return txt.strip(' \t\r\n') if txt else ''
+    else:
+        txt = tag.text
+        return txt.strip(' \t\r\n') if txt else ''
+
+def get_locationPages():
+
+    f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'r')
+
+    soup = bs4.BeautifulSoup(f.read(), "html.parser")
+    cart_header = u'购买    数量    价格        总价        商品'
+    cart_format = u'{0:8}{1:8}{2:12}{3:12}{4}'
+    print ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+    f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'wt')
+    f.writelines(cart_header)
+    f.writelines('\n')
+    f.close()
+    for item in soup.select('div.item-form'):
+        check = tags_val(item.select('div.cart-checkbox input'), key='checked')
+        check = ' + ' if check else ' - '
+        count = tags_val(item.select('div.quantity-form input'), key='value')
+        price = tags_val(item.select('div.p-price strong'))
+        sums = tags_val(item.select('div.p-sum strong'))
+        gname = tags_val(item.select('div.p-name a'))
+
+        f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
+        f.writelines(cart_format.format(check, count, price[1:], sums[1:], gname))
+        f.writelines('\n')
         f.close()
 
 
 
 def main():
-    #
-    jd = JDLoginByQR()
-    if not jd.login_by_QR():
-        return
+    get_locationPages()
 
-    jd.getPage()
+
+    # jd = JDLoginByQR()
+    # if not jd.login_by_QR():
+    #     return
+    #
+    # jd.getPage()
 
 if __name__ == '__main__':
 
