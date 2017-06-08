@@ -9,6 +9,15 @@ import time # 日期模块
 import json # json 解析
 import random #随机数模块
 import bs4 # 解析网页
+import pickle
+
+#注意,cookielib 归入http.cookiejar中
+try:
+    from http.cookiejar import MozillaCookieJar
+except ImportError:
+    from cookielib import MozillaCookieJar
+
+
 
 
 #定义JD类 扫码登录类:
@@ -21,6 +30,9 @@ class JDLoginByQR():
     def __init__(self):
 
         self.request = requests.Session()
+        self.cookieFile = "Cookies_JD_Saved.txt"
+        _cookieJar = MozillaCookieJar(self.cookieFile);
+        _cookieJar.save();
 
         # 处理SSL,代理错误: Caused by ProxyError('Cannot connect to proxy.'
         # trust_env:取用系統環境變數 =False，將忽略以下系統參數:系統的 proxys/.netrc 的身份認證/定義在 REQUESTS_CA_BUNDLE 中的 CA bundles CURL_CA_BUNDLE
@@ -32,13 +44,34 @@ class JDLoginByQR():
             'Accept-Language': 'zh-CN,zh;q=0.8',
             'Connection': 'keep-alive',
         }
-        self.cookies = {
 
-        }
+
+    def load_cookies(self):
+        with open(self.cookieFile,'rb') as f:
+            try:
+                cookieData = pickle.load(f)
+                if len(cookieData) > 1 :
+                    self.request.cookies = requests.utils.cookiejar_from_dict(cookieData)
+                    print('加载cookie')
+            except EOFError:
+                print('无cookie')
+
+
+    def save_cookies(self):
+        with open(self.cookieFile,'w') as f:
+            pickle.dump(requests.utils.dict_from_cookiejar(self.session.cookies), f)
 
 #自定义方法
     def login_by_QR(self):
         #调用方法后会不断的轮训状态,所以要使用 try:方法
+        try:
+            self.load_cookies()
+            if self.request.cookies:
+                print('cookie:'+self.request.cookies)
+                return True
+        except EOFError:
+            print('无数据')
+
         try:
             print('++++++++++++++++++++++++++++++++++++++++++++++++')
             print(u'{0} >> 请打开 JD 手机客户端,准备扫码登录.'.format(time.time()))
@@ -152,7 +185,9 @@ class JDLoginByQR():
             for k,v in resp.cookies.items():
                 self.cookies[k]=v
             print ('二维码登录成功')
-            f=open(os.path.join(os.getcwd(),"cookie.txt"),'wt')
+
+            self.save_cookies()
+
             
             return True
 
@@ -164,11 +199,21 @@ class JDLoginByQR():
 
 # 我的购物车详情:
     def getGWCPage(self):
+
+        try:
+            self.load_cookies()
+            if self.request.cookies:
+                print ('cookie:' + self.request.cookies)
+                return True
+        except EOFError:
+            print ('无数据')
+
+
         cart_url = 'https://cart.jd.com/cart.action'
         cart_header = u'购买    数量    价格        总价       属性                        商品'
         cart_format = u'{0:6}{1:6}{2:12}{3:12}({4:20}){5}'
         try:
-            resp = self.request.get(cart_url, cookies=self.cookies)
+            resp = self.request.get(cart_url)
             resp.encoding = 'utf-8'
             soup = bs4.BeautifulSoup(resp.text, "html.parser")
             print ('+++++++++++++++++++++++读取购物车明细++++++++++++++++++++++++++++++++')
@@ -203,6 +248,14 @@ class JDLoginByQR():
             print ('Exp {0} : {1}'.format(FuncName(), e))
 #我的订单详情:
     def getDDPage(self):
+        try:
+            cookies = pickle.load(open(os.path.join(os.getcwd(), "cookies.pkl"), "rb"))
+        except EOFError:
+            cookies = []
+        if cookies:
+            print (cookies)
+            for cookie in cookies:
+                self.request.cookies.set(cookie['name'], cookie['value'])
         gwc_url = "http://order.jd.com/center/list.action?search=0&d=2&s=4096"
         gwc_header="购买时间   订单号  商家  数量      价格      支付方式     状态      收货人       商品 "
         cart_format = u'{0:6}{1:6}{2:8}{3:8}{4:8}{5:8}{6:8}{7:8}{8}'
@@ -327,7 +380,7 @@ def main():
 
     jd.getDDPage()
 
-    # jd.getGWCPage()
+    jd.getGWCPage()
 
 if __name__ == '__main__':
 
