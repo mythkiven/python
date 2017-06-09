@@ -11,31 +11,62 @@ import random #随机数模块
 import bs4 # 解析网页
 import pickle
 
-#注意,cookielib 归入http.cookiejar中
-try:
-    from http.cookiejar import MozillaCookieJar
-except ImportError:
-    from cookielib import MozillaCookieJar
 
 
+# 注意,cookielib 归入http.cookiejar中
+# try:
+#     from http.cookiejar import MozillaCookieJar
+# except ImportError:
+#     from cookielib import MozillaCookieJar
 
 
-#定义JD类 扫码登录类:
-
+# 匿名函数: 打印当前函数信息
 FuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
 
+# 解析方法
+def tags_val(tag, key='',index=0):
+    '''
+    return html tag list attribute @key @index
+    if @key is empty, return tag content
+    '''
+    if len(tag) == 0 or len(tag) <= index:
+        return ''
+    elif key:
+        txt = tag[index].get(key)
+        # strip(aa):移除字符串头尾指定的字符aa, 移除各种空格换行
+        return txt.strip(' \t\r\n') if txt else ''
+    else:
+        txt = tag[index].text
+        return txt.strip(' \t\r\n') if txt else ''
+# 解析方法
+def tag_val(tag, key=''):
+    '''
+    return html tag attribute @key
+    if @key is empty, return tag content
+    '''
+    if tag is None:
+        return ''
+    elif key:
+        txt = tag.get(key)
+        return txt.strip(' \t\r\n') if txt else ''
+    else:
+        txt = tag.text
+        return txt.strip(' \t\r\n') if txt else ''
+
+# 定义JD类 扫码登录类:
 class JDLoginByQR():
 
-#初始化
+    # 初始化
     def __init__(self):
 
         self.request = requests.Session()
-        self.cookieFile = "Cookies_JD_Saved.txt"
-        _cookieJar = MozillaCookieJar(self.cookieFile);
-        _cookieJar.save();
-
+        self.cookieFile = "JD_QR_Cookies.txt"
+        self.loginUrl = 'https://passport.jd.com/new/login.aspx'
+        # 个人页面,用户校验 cookie是否有效
+        self.homeUrl = 'http://home.jd.com/'
         # 处理SSL,代理错误: Caused by ProxyError('Cannot connect to proxy.'
-        # trust_env:取用系統環境變數 =False，將忽略以下系統參數:系統的 proxys/.netrc 的身份認證/定義在 REQUESTS_CA_BUNDLE 中的 CA bundles CURL_CA_BUNDLE
+        # trust_env:取用系統環境變數 =False，
+        # 將忽略以下系統參數:系統的 proxys/.netrc 的身份認證/定義在 REQUESTS_CA_BUNDLE 中的 CA bundles CURL_CA_BUNDLE
         self.request.trust_env = False
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
@@ -44,39 +75,96 @@ class JDLoginByQR():
             'Accept-Language': 'zh-CN,zh;q=0.8',
             'Connection': 'keep-alive',
         }
+        self.cookies = {
+        }
 
-
+    #  cookie本地文件 检测
     def load_cookies(self):
-        with open(self.cookieFile,'rb') as f:
-            try:
-                cookieData = pickle.load(f)
-                if len(cookieData) > 1 :
-                    self.request.cookies = requests.utils.cookiejar_from_dict(cookieData)
-                    print('加载cookie')
-            except EOFError:
-                print('无cookie')
-
-
-    def save_cookies(self):
-        with open(self.cookieFile,'w') as f:
-            pickle.dump(requests.utils.dict_from_cookiejar(self.session.cookies), f)
-
-#自定义方法
-    def login_by_QR(self):
-        #调用方法后会不断的轮训状态,所以要使用 try:方法
+        # 没有文件=>有文件没有数据=>有文件有数据
         try:
-            self.load_cookies()
-            if self.request.cookies:
-                print('cookie:'+self.request.cookies)
-                return True
-        except EOFError:
-            print('无数据')
+            # 检测文件大小
+            if os.path.getsize(self.cookieFile):
+                with open(self.cookieFile, 'rb') as f2:
+                    self.cookies = pickle.load(f2)
+                    print('cookie本地检测: 有文件有数据')
+                    return True
+            else:
+                print('cookie本地检测: 有文件无数据')
+        except IOError:
+            print('cookie本地检测: 无文件==>创建文件')
+            # 创建文件
+            os.mknod(self.cookieFile)
+            return False
+
+        return False
+
+        # 写法2:
+        #
+        # f2 = open(self.cookieFile, "rb")
+        # try:
+        #     self.cookies = pickle.load(f2)
+        #     print('cookie本地检测: 成功加载cookie数据', self.cookies)
+        # except (Exception) as e:
+        #     print('cookie本地检测: 错误: {0} : {1}'.format(FuncName(), e))
+        #     return False
+        # f2.close()
+        # return True
+
+    # 保存cookie数据
+    def save_cookies(self):
+        f1 = open(self.cookieFile, "wb")
+        # 清除之前的数据
+        f1.truncate()
+        # 写入新数据
+        pickle.dump(self.cookies, f1)
+        f1.close()
+
+    # cookie 有效性检测
+    def checkCookies(self):
+        try:
+            if self.load_cookies():
+                # request默认是可以重定向的, 但是可以通过设置来禁止重定向, 这样,
+                #  加载 URLA, 不通,重定向到 URLB, 最终的状态码依然是200.
+                #  禁止重定向, 加载 URLA, 不会重新定向, 状态码就是302了.
+                resp = self.request.get(self.homeUrl,cookies=self.cookies, allow_redirects=False)
+                if resp.status_code == 200:
+                    print('cookie有效性校验: 有效')
+                else:
+                    print('cookie有效性校验: 无效,code:', resp.status_code)
+                    return False
+            else:
+                return  False
+        except (Exception) as e:
+            print('cookie有效性校验: 错误: {0} : {1}'.format(FuncName(), e))
+            return False
+
+        # allow_redirects=True, 允许重定向的话, 可以通过查看响应列表来确定是否有重定向.
+        # resp.history ===> 查看 Response 对象列表，我们可以用它来追踪重定向.
+        return True
+
+
+# JD 二维码状态
+# 200 ticket:BAEAIJXyLJHeoP5pHnAfrXPuFGiFR_CZS5BiYpANEap7zVZD
+# 201 消息:二维码未扫描 ，请扫描二维码
+# 202 消息:请手机客户端确认登录
+# 203 消息:二维码过期，请重新扫描 => 需要重新加载二维码
+
+    # QR登录
+    def login_by_QR(self):
+
+        # 判断cookie 是否存在以及是否有效.
+        if self.checkCookies() :
+            print('JD登录检测: cookie有效无需扫码')
+            return True
+        else:
+            print('JD登录检测: cookie无效需扫码')
+
 
         try:
             print('++++++++++++++++++++++++++++++++++++++++++++++++')
             print(u'{0} >> 请打开 JD 手机客户端,准备扫码登录.'.format(time.time()))
             urls = (
-                'https://passport.jd.com/new/login.aspx',
+                self.loginUrl,
                 'https://qr.m.jd.com/show',
                 'https://qr.m.jd.com/check',
                 'https://passport.jd.com/uc/qrCodeTicketValidation' #这个是校验登录的
@@ -85,7 +173,8 @@ class JDLoginByQR():
             # 1. 获取登录页面:
             resp = self.request.get(
                 urls[0],
-                headers=self.headers
+                headers=self.headers,
+                cookies=self.cookies
             )
             ''' resp 关键点:
             text: 内容
@@ -188,32 +277,47 @@ class JDLoginByQR():
 
             self.save_cookies()
 
-            
             return True
 
         except Exception as e:
             print ('Exp:', e)
             raise
+
         return False
 
 
+    # 登录检测
+    def checkLogin(self):
+        # 判断cookie 是否存在以及是否有效.
+        if self.login_by_QR():
+            print('已登录')
+            return True
+        else:
+            print('尚未登录==>登录')
+            if self.login_by_QR():
+                print('登录成功!')
+                return True
+            else:
+                print('登录失败!')
+                return False
+
 # 我的购物车详情:
+
+    # 购物车
     def getGWCPage(self):
 
-        try:
-            self.load_cookies()
-            if self.request.cookies:
-                print ('cookie:' + self.request.cookies)
-                return True
-        except EOFError:
-            print ('无数据')
-
+        # 判断是否登陆
+        if self.checkLogin():
+            print('已登录,开始加载购物车数据')
+        else:
+            print('未登录,无法加载购物车数据')
+            return
 
         cart_url = 'https://cart.jd.com/cart.action'
         cart_header = u'购买    数量    价格        总价       属性                        商品'
         cart_format = u'{0:6}{1:6}{2:12}{3:12}({4:20}){5}'
         try:
-            resp = self.request.get(cart_url)
+            resp = self.request.get(cart_url,cookies=self.cookies)
             resp.encoding = 'utf-8'
             soup = bs4.BeautifulSoup(resp.text, "html.parser")
             print ('+++++++++++++++++++++++读取购物车明细++++++++++++++++++++++++++++++++')
@@ -247,15 +351,17 @@ class JDLoginByQR():
         except (Exception) as e:
             print ('Exp {0} : {1}'.format(FuncName(), e))
 #我的订单详情:
+
+    # 订单页面
     def getDDPage(self):
-        try:
-            cookies = pickle.load(open(os.path.join(os.getcwd(), "cookies.pkl"), "rb"))
-        except EOFError:
-            cookies = []
-        if cookies:
-            print (cookies)
-            for cookie in cookies:
-                self.request.cookies.set(cookie['name'], cookie['value'])
+
+        # 判断是否登陆
+        if self.checkLogin():
+            print('已登录,开始加载订单数据')
+        else:
+            print('未登录,无法加载订单数据')
+            return
+
         gwc_url = "http://order.jd.com/center/list.action?search=0&d=2&s=4096"
         gwc_header="购买时间   订单号  商家  数量      价格      支付方式     状态      收货人       商品 "
         cart_format = u'{0:6}{1:6}{2:8}{3:8}{4:8}{5:8}{6:8}{7:8}{8}'
@@ -303,41 +409,6 @@ class JDLoginByQR():
             print ('Exp {0} : {1}'.format(FuncName(), e))
 
 
-def tags_val(tag, key='',index=0):
-    '''
-    return html tag list attribute @key @index
-    if @key is empty, return tag content
-    '''
-    if len(tag) == 0 or len(tag) <= index:
-        return ''
-    elif key:
-        txt = tag[index].get(key)
-        # strip(aa):移除字符串头尾指定的字符aa, 移除各种空格换行
-        return txt.strip(' \t\r\n') if txt else ''
-    else:
-        txt = tag[index].text
-        return txt.strip(' \t\r\n') if txt else ''
-
-
-def tag_val(tag, key=''):
-    '''
-    return html tag attribute @key
-    if @key is empty, return tag content
-    '''
-    if tag is None:
-        return ''
-    elif key:
-        txt = tag.get(key)
-        return txt.strip(' \t\r\n') if txt else ''
-    else:
-        txt = tag.text
-        return txt.strip(' \t\r\n') if txt else ''
-
-
-
-
-
-
 
 def get_locationPages():
 
@@ -370,16 +441,16 @@ def get_locationPages():
     f.writelines('\n')
     f.close()
 
+# 主入口
 def main():
     # get_locationPages()
 
-
     jd = JDLoginByQR()
-    if not jd.login_by_QR():
-        return
+
+    # if not jd.login_by_QR:
+    #     return
 
     jd.getDDPage()
-
     jd.getGWCPage()
 
 if __name__ == '__main__':
