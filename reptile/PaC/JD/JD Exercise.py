@@ -11,6 +11,7 @@ import random #随机数模块
 import bs4 # 解析网页
 import pickle
 
+import scrapy
 
 
 # 注意,cookielib 归入http.cookiejar中
@@ -52,11 +53,39 @@ def tag_val(tag, key=''):
     else:
         txt = tag.text
         return txt.strip(' \t\r\n') if txt else ''
+# 创建新的文件
+def newClearJDFile(name,path):
+    try:
+        # 检测文件大小
+        if os.path.getsize(path):
+            with open(name, 'wb') as f1:
+                f1.truncate()
+                print('清空文件:'+name+'的内容')
+                return True
+        else:
+            print('文件:'+name+'的内容为空')
+    except IOError:
+        print('不存在文件:'+name+'==>创建之')
+        # 创建文件
+        os.mknod(path)
+        return True
+
+    return False
+
+
+class Jianshu(CrawlSpider):
+    name='jianshu'
+    start_urls=['http://www.jianshu.com']
+    url = 'http://www.jianshu.com'
+
+    def parse(self, response):
+        selector = Selector(response)
+
 
 # 定义JD类 扫码登录类:
 class JDLoginByQR():
 
-    # 初始化
+    # 1.初始化
     def __init__(self):
 
         self.request = requests.Session()
@@ -78,7 +107,7 @@ class JDLoginByQR():
         self.cookies = {
         }
 
-    #  cookie本地文件 检测
+    # 2.cookie本地文件 检测
     def load_cookies(self):
         # 没有文件=>有文件没有数据=>有文件有数据
         try:
@@ -110,7 +139,7 @@ class JDLoginByQR():
         # f2.close()
         # return True
 
-    # 保存cookie数据
+    # 3.保存cookie数据
     def save_cookies(self):
         f1 = open(self.cookieFile, "wb")
         # 清除之前的数据
@@ -119,7 +148,7 @@ class JDLoginByQR():
         pickle.dump(self.cookies, f1)
         f1.close()
 
-    # cookie 有效性检测
+    # 4.cookie 有效性检测
     def checkCookies(self):
         try:
             if self.load_cookies():
@@ -133,8 +162,8 @@ class JDLoginByQR():
                     print('cookie有效性校验: 无效,code:', resp.status_code)
                     return False
             else:
-                return  False
-        except (Exception) as e:
+                return False
+        except(Exception) as e:
             print('cookie有效性校验: 错误: {0} : {1}'.format(FuncName(), e))
             return False
 
@@ -142,14 +171,7 @@ class JDLoginByQR():
         # resp.history ===> 查看 Response 对象列表，我们可以用它来追踪重定向.
         return True
 
-
-# JD 二维码状态
-# 200 ticket:BAEAIJXyLJHeoP5pHnAfrXPuFGiFR_CZS5BiYpANEap7zVZD
-# 201 消息:二维码未扫描 ，请扫描二维码
-# 202 消息:请手机客户端确认登录
-# 203 消息:二维码过期，请重新扫描 => 需要重新加载二维码
-
-    # QR登录
+    # 1-QR登录
     def login_by_QR(self):
 
         # 判断cookie 是否存在以及是否有效.
@@ -254,9 +276,18 @@ class JDLoginByQR():
                     print(u'状态码:{} 消息:{}'.format(rs['code'],rs['msg']))
                     #等会再轮训一次, 否则会太快了...
                     time.sleep(3)
+                    if rs['code'] == 203:
+                        print(u'二维码失效')
+                        return 203
             if not qr_ticket:
                 print (u'二维码登陆失败')
                 return False
+            # JD 二维码状态
+            # 200 ticket:BAEAIJXyLJHeoP5pHnAfrXPuFGiFR_CZS5BiYpANEap7zVZD
+            # 201 消息:二维码未扫描 ，请扫描二维码
+            # 202 消息:请手机客户端确认登录
+            # 203 消息:二维码过期，请重新扫描 => 需要重新加载二维码
+
             '''
             下边是第二步:校验取登录的状态,其中设置都是来自 charles.
             '''
@@ -285,11 +316,13 @@ class JDLoginByQR():
 
         return False
 
-
-    # 登录检测
+    # 2-登录检测
     def checkLogin(self):
-        # 判断cookie 是否存在以及是否有效.
-        if self.login_by_QR():
+        # 失效
+        if self.login_by_QR() == 203:
+            print('二维码未扫描而失效')
+            return False
+        elif self.login_by_QR():
             print('已登录')
             return True
         else:
@@ -303,7 +336,18 @@ class JDLoginByQR():
 
 # 我的购物车详情:
 
-    # 购物车
+
+
+'''
+这里遇到问题: 部分的网页内容没有抓取下来: 分析应该是 JS 生成的, 所以没有抓下来.
+针对 爬取 JS 生成的内容,解决方法如下:
+案例: 打开北邮人论坛的首页，发现它的首页HTML源码中确实没有页面所显示文章的内容，很可能这是通过JS异步加载到页面的.
+1. 模拟浏览器环境,然后进行抓取. 缺点是对内存和CPU的消耗都非常严重，模拟浏览器环境的爬虫代码要尽可能避免
+2. 用PhantomJS()、CasperJS这些引擎来做浏览器抓取。
+Selenium是一个用于Web应用程序测试的工具
+Phantom JS是一个服务器端的 JavaScript API 的 WebKit
+'''
+    # A-购物车
     def getGWCPage(self):
 
         # 判断是否登陆
@@ -319,17 +363,20 @@ class JDLoginByQR():
         try:
             resp = self.request.get(cart_url,cookies=self.cookies)
             resp.encoding = 'utf-8'
-            soup = bs4.BeautifulSoup(resp.text, "html.parser")
-            print ('+++++++++++++++++++++++读取购物车明细++++++++++++++++++++++++++++++++')
+            soup = bs4.BeautifulSoup(resp.content, "html.parser")
 
-            f = open(os.path.join(os.getcwd(), "我的购物车页面.html"), 'wt')
+            print ('+++++++++++++++++++++++A-读取购物车明细++++++++++++++++++++++++++++++++')
+
+            f = open(os.path.join(os.getcwd(), "A-我的购物车页面.html"), 'wt')
             f.writelines(soup.prettify())
             f.close()
 
-            f = open(os.path.join(os.getcwd(), "我的购物车.txt"), 'wt')
+            newClearJDFile("A-我的购物车清单.txt", os.path.join(os.getcwd()))
+            f = open(os.path.join(os.getcwd(), "A-我的购物车清单.txt"), 'wt')
             f.writelines(cart_header)
             f.writelines('\n')
             f.close()
+
             for item in soup.select('div.item-form'):
                 check = tags_val(item.select('div.cart-checkbox input'), key='checked')
                 check = ' + ' if check else ' - '
@@ -338,13 +385,13 @@ class JDLoginByQR():
                 sums = tags_val(item.select('div.p-sum strong'))
                 gname = tags_val(item.select('div.p-name a'))
                 propsTxt = tags_val(item.select('div.props-txt'))
-                f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
+                f = open(os.path.join(os.getcwd(), "A-我的购物车清单.txt"), 'a+')
                 f.writelines(cart_format.format(check, count, price[1:], sums[1:], propsTxt, gname))
                 f.writelines('\n')
                 f.close()
             t_count = tags_val(soup.select('div.amount-sum em'))
             t_price = tags_val(soup.select('span.sumPrice em'))
-            f = open(os.path.join(os.getcwd(), "我的购物单.txt"), 'a+')
+            f = open(os.path.join(os.getcwd(), "A-我的购物车清单.txt"), 'a+')
             f.writelines('已选:' + t_count + '\n' + '总额:' + t_price)
             f.writelines('\n')
             f.close()
@@ -352,7 +399,7 @@ class JDLoginByQR():
             print ('Exp {0} : {1}'.format(FuncName(), e))
 #我的订单详情:
 
-    # 订单页面
+    # B-订单页面
     def getDDPage(self):
 
         # 判断是否登陆
@@ -363,33 +410,50 @@ class JDLoginByQR():
             return
 
         gwc_url = "http://order.jd.com/center/list.action?search=0&d=2&s=4096"
-        gwc_header="购买时间   订单号  商家  数量      价格      支付方式     状态      收货人       商品 "
-        cart_format = u'{0:6}{1:6}{2:8}{3:8}{4:8}{5:8}{6:8}{7:8}{8}'
+        gwc_header="购买时间              订单号        商家    数量     价格        支付方式     状态      收货人       商品    地址"
+        # < 左对齐 >右对齐 =填充 ^ 居中
+        # 格式化参考:
+        #  官方文档: https://docs.python.org/3/library/string.html#grammar-token-align
+        cart_format = u'{0:<20}{1:>12}{2:^6}{3:^6}{4:^6}{5:>8}{6:>8}{7:>8}{8}{9}'
         #今年订单:
         try:
-            resp_thisYear = self.request.get(gwc_url,params={'search':'0','d':'2','s':'4096'},)
-            resp_thisYear.encoding = 'utf-8'
-            soup = bs4.BeautifulSoup(resp_thisYear.text,"html.parser")
-            print ('+++++++++++++++读取订单详情+++++++++++++++')
 
-            f = open(os.path.join(os.getcwd(),"我的订单页面.html"),'wt')
+            resp_thisYear = self.request.get(gwc_url,
+                                             params={'search':'0','d':'2','s':'4096'},
+                                             cookies=self.cookies)
+
+            resp_thisYear.encoding = 'gbk' # charset=gb2312
+            # print(resp_thisYear.text[:500])
+            '''
+            bs升级到4后，实例化时需要明确指定文档解析器，如： soup = BeautifulSoup(html_doc, 'lxml')
+
+            '''
+            soup = bs4.BeautifulSoup(resp_thisYear.text,"html.parser")
+            print ('++++++++++++++++++++++++B-读取订单详情+++++++++++++++++++++++++++++++')
+
+            f = open(os.path.join(os.getcwd(),"B-我的订单页面.html"),'wt')
             f.writelines(soup.prettify())
             f.close
 
-            f = open(os.path.join(os.getcwd(),"我的订单.txt"),'wt')
+            newClearJDFile("B-我的订单.txt", os.path.join(os.getcwd()))
+            f = open(os.path.join(os.getcwd(),"B-我的订单.txt"),'wt')
             f.writelines(gwc_header)
+            f.writelines('\n')
             f.close
 
             # 所有的订单都以 tbody形式存在于 table 中.
-            for items in soup.select('table.oeder-tb'):
+            for items in soup.select('tbody'):
                 #时间
                 s_time = tags_val(items.select('span.dealtime'))
                 #订单号
-                s_orderNum = tags_val(items.select('a.orderIdLinks'))
+                s_orderNum = tags_val(items.select('span.number a'))
+
                 #商家
                 s_orderInfo = tags_val(items.select('span.order-shop span.shop-txt'))
                 # 名称
-                s_orderName = tags_val(items.select('div.p-name a'))
+                s_orderName = tags_val(items.select('div.p-msg div.p-name a'))
+                #print(items.select('div.p-msg div.p-name'))
+                # print(items.select('div.p-name a'))
                 #数量
                 s_goodsNum = tags_val(items.select('div.goods-number'))
                 #收货人
@@ -400,8 +464,12 @@ class JDLoginByQR():
                 s_payW = tags_val(items.select('div.amount span.ftx-13'))
                 #状态
                 s_status = tags_val(items.select('div.status span.order-status'))
-                f = open(os.path.join(os.getcwd(), "我的订单.txt"), 'a+')
-                f.writelines(cart_format.format(s_time,s_orderNum,s_orderInfo,s_goodsNum,s_price,s_payW,s_status,s_people,s_orderName))
+
+                # 地址
+                s_adress = tags_val(items.select('div.prompt-01 div.pc  p'))
+
+                f = open(os.path.join(os.getcwd(), "B-我的订单.txt"), 'a+')
+                f.writelines(cart_format.format(s_time,s_orderNum,s_orderInfo,s_goodsNum,s_price,s_payW,s_status,s_people,s_orderName,s_adress))
                 f.writelines('\n')
                 f.close()
 
@@ -442,16 +510,12 @@ def get_locationPages():
     f.close()
 
 # 主入口
+
 def main():
-    # get_locationPages()
-
     jd = JDLoginByQR()
-
-    # if not jd.login_by_QR:
-    #     return
-
-    jd.getDDPage()
     jd.getGWCPage()
+    jd.getDDPage()
+
 
 if __name__ == '__main__':
 

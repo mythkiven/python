@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc57ad97-9c10-455f-bfa2-dcfda73e896f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cookies_JD_Saved.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cookies.pkl" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scrapy/tutorial/tutorial/spiders/dmoz_spider.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sitemap.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_QR_Cookies--.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/我的订单.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/我的订单页面.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/我的购物单.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/我的购物车.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/我的购物车页面.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qr_test.png" afterPath="$PROJECT_DIR$/qr_test.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pachong.iml" afterPath="$PROJECT_DIR$/.idea/pachong.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD Exercise.py" afterPath="$PROJECT_DIR$/JD Exercise.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/我的订单页面.html" afterPath="$PROJECT_DIR$/我的订单页面.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_QR_Cookies.txt" afterPath="$PROJECT_DIR$/JD_QR_Cookies.txt" />
     </list>
     <ignored path="pachong.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +30,9 @@
     <SUITE FILE_PATH="coverage/JD$JD_QR.coverage" NAME="JD QR Coverage Results" MODIFIED="1496215066830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/JD$JD_Login.coverage" NAME="JD Login Coverage Results" MODIFIED="1496219709473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/JD$learning_0.coverage" NAME="learning_0 Coverage Results" MODIFIED="1494583775942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/JD$JD_Exercise.coverage" NAME="JD Exercise Coverage Results" MODIFIED="1497003002442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/JD$JD_Exercise.coverage" NAME="JD Exercise Coverage Results" MODIFIED="1497261693555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/JD$JD_learn.coverage" NAME="JD learn Coverage Results" MODIFIED="1496400362828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/JD$sitemap.coverage" NAME="sitemap Coverage Results" MODIFIED="1497435765042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pachong$JD_QR.coverage" NAME="JD QR Coverage Results" MODIFIED="1494576857522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -42,21 +47,11 @@
       <file leaf-file-name="JD Login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JD Login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
+            <state relative-caret-position="544">
               <caret line="57" column="12" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="12" />
               <folding>
                 <element signature="e#38#48#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sessions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/requests/sessions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,7 +81,7 @@
       <file leaf-file-name="JD learn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JD learn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5085">
+            <state relative-caret-position="850">
               <caret line="339" column="24" selection-start-line="339" selection-start-column="24" selection-end-line="339" selection-end-column="24" />
               <folding>
                 <element signature="e#17#27#0" expanded="true" />
@@ -95,25 +90,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JD Exercise.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JD Exercise.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JD Exercise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-154">
-              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="424" column="25" selection-start-line="424" selection-start-column="25" selection-end-line="424" selection-end-column="42" />
               <folding>
                 <element signature="e#27#37#0" expanded="true" />
-                <element signature="e#890#1193#0" expanded="false" />
-                <element signature="e#2202#3096#0" expanded="false" />
-                <element signature="e#3151#3296#0" expanded="false" />
-                <element signature="e#3353#4188#0" expanded="false" />
-                <element signature="e#4191#4201#0" expanded="false" />
-                <element signature="e#4390#9032#0" expanded="false" />
-                <element signature="e#9080#9417#0" expanded="false" />
-                <element signature="e#9458#11543#0" expanded="false" />
-                <element signature="e#9823#11443#0" expanded="false" />
-                <element signature="e#11590#13819#0" expanded="false" />
-                <element signature="e#13853#15244#0" expanded="false" />
-                <marker date="1497003953000" expanded="false" signature="452:852" ph="..." />
+                <element signature="e#471#867#0" expanded="false" />
+                <element signature="e#904#1206#0" expanded="false" />
+                <element signature="e#1250#1632#0" expanded="false" />
+                <element signature="e#2843#3737#0" expanded="false" />
+                <element signature="e#3794#3939#0" expanded="false" />
+                <element signature="e#3998#4831#0" expanded="false" />
+                <element signature="e#4882#9853#0" expanded="false" />
+                <element signature="e#9902#10301#0" expanded="false" />
+                <element signature="e#15964#17355#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sitemap.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sitemap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+              <folding>
+                <element signature="e#22#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapy/tutorial/tutorial/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapy/tutorial/tutorial/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dmoz_spider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapy/tutorial/tutorial/spiders/dmoz_spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#218#270#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,7 +174,10 @@
         <option value="$PROJECT_DIR$/JD Login.py" />
         <option value="$PROJECT_DIR$/JD learn.py" />
         <option value="$PROJECT_DIR$/JD QR.py" />
+        <option value="$PROJECT_DIR$/Scrapy/tutorial/tutorial/spiders/dmoz_spider.py" />
+        <option value="$PROJECT_DIR$/Scrapy/tutorial/tutorial/items.py" />
         <option value="$PROJECT_DIR$/JD Exercise.py" />
+        <option value="$PROJECT_DIR$/sitemap.py" />
       </list>
     </option>
   </component>
@@ -149,8 +188,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="383" />
-    <option name="y" value="158" />
+    <option name="x" value="60" />
+    <option name="y" value="40" />
     <option name="width" value="1570" />
     <option name="height" value="998" />
   </component>
@@ -186,10 +225,35 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="External Dependencies">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="/">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Users">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="guoyinjinrong1">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JD">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,6 +264,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -214,25 +279,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.JD Exercise">
-    <configuration default="false" name="learning_0" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pachong" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_0.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.sitemap">
     <configuration default="false" name="JD QR" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,6 +348,24 @@
       <module name="pachong" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JD Exercise.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="sitemap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pachong" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sitemap.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -514,19 +579,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.learning_0" />
-      <item index="1" class="java.lang.String" itemvalue="Python.JD QR" />
-      <item index="2" class="java.lang.String" itemvalue="Python.JD learn" />
-      <item index="3" class="java.lang.String" itemvalue="Python.JD Login" />
-      <item index="4" class="java.lang.String" itemvalue="Python.JD Exercise" />
+      <item index="0" class="java.lang.String" itemvalue="Python.JD QR" />
+      <item index="1" class="java.lang.String" itemvalue="Python.JD learn" />
+      <item index="2" class="java.lang.String" itemvalue="Python.JD Login" />
+      <item index="3" class="java.lang.String" itemvalue="Python.JD Exercise" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sitemap" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.JD Exercise" />
-        <item index="1" class="java.lang.String" itemvalue="Python.JD learn" />
-        <item index="2" class="java.lang.String" itemvalue="Python.JD Login" />
-        <item index="3" class="java.lang.String" itemvalue="Python.JD QR" />
-        <item index="4" class="java.lang.String" itemvalue="Python.learning_0" />
+        <item index="0" class="java.lang.String" itemvalue="Python.sitemap" />
+        <item index="1" class="java.lang.String" itemvalue="Python.JD Exercise" />
+        <item index="2" class="java.lang.String" itemvalue="Python.JD learn" />
+        <item index="3" class="java.lang.String" itemvalue="Python.JD Login" />
+        <item index="4" class="java.lang.String" itemvalue="Python.JD QR" />
       </list>
     </recent_temporary>
   </component>
@@ -547,16 +612,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="383" y="158" width="1570" height="998" extended-state="0" />
-    <editor active="true" />
+    <frame x="60" y="40" width="1570" height="998" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24803665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2513089" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26778784" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35022026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25275937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11696658" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -611,28 +676,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/JD Exercise.py</url>
-          <line>414</line>
+          <line>482</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/JD Exercise.py</url>
-          <line>431</line>
+          <line>499</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/JD Exercise.py</url>
-          <line>385</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JD Login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
+        <state relative-caret-position="825">
           <caret line="57" column="12" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="12" />
           <folding>
             <element signature="e#38#48#0" expanded="true" />
@@ -668,7 +728,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JD learn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5085">
+        <state relative-caret-position="5055">
           <caret line="339" column="24" selection-start-line="339" selection-start-column="24" selection-end-line="339" selection-end-column="24" />
           <folding>
             <element signature="e#17#27#0" expanded="true" />
@@ -682,18 +742,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#27#37#0" expanded="true" />
-            <element signature="e#890#1193#0" expanded="false" />
-            <element signature="e#2202#3096#0" expanded="false" />
-            <element signature="e#3151#3296#0" expanded="false" />
-            <element signature="e#3353#4188#0" expanded="false" />
-            <element signature="e#4191#4201#0" expanded="false" />
-            <element signature="e#4390#9032#0" expanded="false" />
-            <element signature="e#9080#9417#0" expanded="false" />
-            <element signature="e#9458#11543#0" expanded="false" />
-            <element signature="e#9823#11443#0" expanded="false" />
-            <element signature="e#11590#13819#0" expanded="false" />
-            <element signature="e#13853#15244#0" expanded="false" />
-            <marker date="1497003953000" expanded="false" signature="452:852" ph="..." />
+            <element signature="e#471#867#0" expanded="false" />
+            <element signature="e#904#1206#0" expanded="false" />
+            <element signature="e#1250#1632#0" expanded="false" />
+            <element signature="e#2843#3737#0" expanded="false" />
+            <element signature="e#3794#3939#0" expanded="false" />
+            <element signature="e#3998#4831#0" expanded="false" />
+            <element signature="e#4882#9853#0" expanded="false" />
+            <element signature="e#9902#10301#0" expanded="false" />
+            <element signature="e#15964#17355#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -746,22 +803,152 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JD Exercise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#27#37#0" expanded="true" />
-            <element signature="e#890#1193#0" expanded="false" />
-            <element signature="e#2202#3096#0" expanded="false" />
-            <element signature="e#3151#3296#0" expanded="false" />
-            <element signature="e#3353#4188#0" expanded="false" />
-            <element signature="e#4191#4201#0" expanded="false" />
-            <element signature="e#4390#9032#0" expanded="false" />
-            <element signature="e#9080#9417#0" expanded="false" />
-            <element signature="e#9458#11543#0" expanded="false" />
-            <element signature="e#9823#11443#0" expanded="false" />
-            <element signature="e#11590#13819#0" expanded="false" />
-            <element signature="e#13853#15244#0" expanded="false" />
-            <marker date="1497003953000" expanded="false" signature="452:852" ph="..." />
+            <element signature="e#471#867#0" expanded="false" />
+            <element signature="e#904#1206#0" expanded="false" />
+            <element signature="e#1250#1632#0" expanded="false" />
+            <element signature="e#2843#3737#0" expanded="false" />
+            <element signature="e#3794#3939#0" expanded="false" />
+            <element signature="e#3998#4831#0" expanded="false" />
+            <element signature="e#4882#9853#0" expanded="false" />
+            <element signature="e#9902#10301#0" expanded="false" />
+            <element signature="e#15964#17355#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learning_0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD QR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11895">
+          <caret line="793" column="8" selection-start-line="793" selection-start-column="8" selection-end-line="794" selection-end-column="57" />
+          <folding>
+            <element signature="e#188#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD learn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="339" column="24" selection-start-line="339" selection-start-column="24" selection-end-line="339" selection-end-column="24" />
+          <folding>
+            <element signature="e#17#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/requests/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-851">
+          <caret line="296" column="8" selection-start-line="296" selection-start-column="8" selection-end-line="296" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD Login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="57" column="12" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="12" />
+          <folding>
+            <element signature="e#38#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/requests/compat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/requests/packages/chardet/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.5/lib/python/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="764" column="22" selection-start-line="764" selection-start-column="22" selection-end-line="764" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/tutorial/tutorial/items.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/tutorial/tutorial/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/tutorial/tutorial/spiders/dmoz_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#218#270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/tutorial/tutorial/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD Exercise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="424" column="25" selection-start-line="424" selection-start-column="25" selection-end-line="424" selection-end-column="42" />
+          <folding>
+            <element signature="e#27#37#0" expanded="true" />
+            <element signature="e#471#867#0" expanded="false" />
+            <element signature="e#904#1206#0" expanded="false" />
+            <element signature="e#1250#1632#0" expanded="false" />
+            <element signature="e#2843#3737#0" expanded="false" />
+            <element signature="e#3794#3939#0" expanded="false" />
+            <element signature="e#3998#4831#0" expanded="false" />
+            <element signature="e#4882#9853#0" expanded="false" />
+            <element signature="e#9902#10301#0" expanded="false" />
+            <element signature="e#15964#17355#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sitemap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding>
+            <element signature="e#22#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
